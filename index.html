@@ -16,7 +16,7 @@
 
     <div class="mid">
         <p>New way to build a healthy lifestyle</p>
-        <h2>UPGRADE YOUR BODY AT FITNESS4YOU</h2>
+        <h2>UPGRADE YOUR BODY AT FITNESS<span class="four">4</span>U</h2>
         <div class="btn">
             <a href="#" class="simple">Get Started</a>
             <a href="#" class="border">Learn more</a>
@@ -25,7 +25,7 @@
 
     <div class="details">
         <div class="one">
-            <h3>New to the Fitness4U?</h3>
+            <h3>New to the Fitness<span class="four">4</span>U?</h3>
             <h6>Your membership is up to 2 months FREE (Rs.200 per month)</h6>
             <p>Our Monthly fee is Rs.500 if you take 2 months admission then fee will be Rs.800
             </p>
@@ -34,18 +34,18 @@
         <div class="two">
             <h3>Working Hours</h3>
             <br />
-            <h5>Sunday : Closed</h5>
-            <h5>Monday - Saterday</h5>
+            <h5 id="day"></h5>
+            <h5>Monday - Saturday</h5>
             <p>5:00 AM - 10:00 PM</p>
             <br />
-            <h5>Monday - Saterday</h5>
+            <h5>Monday - Saturday</h5>
             <p>5:00 AM - 10:00 PM</p>
         </div>
     </div>
 
     <div class="trainer">
         <div class="about">
-            <h2>Hello, We are Fitness4U</h2>
+            <h2>Hello, We are Fitness<span class="four">4</span>U</h2>
             <p>Our gym is more than just a place to work out; it's a hub for wellness, motivation, and camaraderie.
                 Located in the heart of Babhaleshwar, our state-of-the-art facility offers a diverse range of
                 equipment and classes to cater to all fitness levels and interests.
@@ -58,7 +58,7 @@
         <div class="people">
             <div class="team1">
                 <div class="img">
-                    <img src="./img/about.jpg" alt="team1">
+                    <img src="./img/mayur-about.jpg" alt="team1">
                 </div>
                 <div class="teamDetails">
                     <div class="name">
@@ -90,6 +90,19 @@
         </div>
     </div>
 
+    <script>
+        function day() {
+            const dayElement = document.getElementById('day');
+
+            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            const d = new Date();
+            const day = weekday[d.getDay()];
+            
+            dayElement.innerText = `${day} : ${day=="Sunday" ? "Closed" : "Opened"}`
+        }
+        day();
+    </script>
     <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
 
