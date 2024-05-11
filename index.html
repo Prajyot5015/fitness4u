@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Fitness4U</title>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -25,6 +26,53 @@
     </div>
 
     <!--End Home -->
+
+    <img src="./img/OIP.jpeg" alt="image not found" id="gym-main-image"  />
+    <div class="images-container">
+        <img src="./img/g7.jpg" alt="image not found" class="gym-image" onclick="change('g7')" />
+        <img src="./img/g8.jpg" alt="image not found" class="gym-image" onclick="change('g8')" />
+        <img src="./img/cardio.jpg" alt="image not found" class="gym-image" onclick="change('g3')" />
+        <img src="./img/g4.jpg" alt="image not found" class="gym-image" onclick="change('g4')" />
+        <img src="./img/g2.jpg" alt="image not found" class="gym-image" onclick="change('g2')" />
+        <img src="./img/g6.jpg" alt="image not found" class="gym-image" onclick="change('g6')" />
+    </div>
+
+    <script>
+        function change(path)
+        {
+            imgElement = document.getElementById('gym-main-image');
+            
+            if(path=='g7')
+            {
+                imgElement.src = "./img/g7.jpg";
+            }
+            else if(path=='g8')
+            {
+                imgElement.src = "./img/g8.jpg";
+            }
+            else if(path=='g3')
+            {
+                imgElement.src = "./img/cardio.jpg";
+            }
+            else if(path=='g4')
+            {
+                imgElement.src = "./img/g4.jpg";
+            }
+            else if(path=='g2')
+            {
+                imgElement.src = "./img/g2.jpg";
+            }
+            else if(path=='g6')
+            {
+                imgElement.src = "./img/g6.jpg";
+            }
+        }
+
+    </script>
+   
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

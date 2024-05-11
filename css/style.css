@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color:  #4d4d4d;
     color: #fff;
 }
 
@@ -21,10 +21,8 @@ body {
 }
 
 .highlights {
-    width: 60%;
-    position: relative;
-    display: inline-block;
-    z-index: 11;
+    text-align: center;
+    
 }
 
 .highlights h3 {
@@ -74,4 +72,42 @@ body {
     cursor: pointer;
     letter-spacing: 1.5px;
     background: red;
+}
+
+#gym-main-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 30px auto;
+}
+.images-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gym-image{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;            
+}
+
+@media screen and (max-width: 550px) {
+  .highlights h1{
+    font-size: 40px;
+  }
+  .join{
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+  .tagline{
+    font-size: 10px;
+  }
+  
 }
