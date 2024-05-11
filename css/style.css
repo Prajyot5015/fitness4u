@@ -5,109 +5,433 @@
 }
 
 body {
-    background-color:  #4d4d4d;
+    background-color: #171819;
     color: #fff;
 }
 
-.home {
-    background: url(./../img/bg-home.webp) no-repeat;
+.back {
+    background-image: url(./../img/bg-home.webp);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+}
+
+.back .overlay {
+    background: #171819;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+}
+
+.mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.mid p {
+    color: #7f8c8d;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.mid h2 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.mid .btn {
+    margin-top: 25px;
+}
+
+.mid .btn a {
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.mid .btn .simple {
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.mid .btn .simple:hover {
+    color: #ff5733;
+}
+
+.mid .btn .border {
+    color: #ff5733;
+    border: 1px solid #ff5733;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.mid .btn .border:hover {
+    background: #fff;
+    border: 1px solid #fff;
+}
+
+.details {
+    width: 100%;
     display: flex;
-    min-height: 100vh;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 200px;
+}
+
+.details .one {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.details .one h3 {
+    font-size: 40px;
+    padding-bottom: 18px;
+}
+
+.details .one h6 {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.details .one p {
+    color: #666262;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.details .one a {
+    color: #fff;
+    background: #f13a11;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.details .one a:hover {
+    background: #fff;
+    color: #f13a11;
+}
+
+.details .two {
+    width: 45%;
+    border-left: 1px solid#666262;
+    padding-left: 65px;
+}
+
+.details .two h3 {
+    font-size: 40px;
+}
+
+.details .two h5 {
+    font-size: 18px;
+}
+
+.details .two p {
+    font-size: 18px;
+    color: #666262;
+    margin-bottom: 12px;
+}
+
+.trainer {
+    background: #f9f9f9;
+    color: #171819;
+    padding: 120px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.highlights {
-    text-align: center;
-    
-}
-
-.highlights h3 {
-    display: inline;
-    font-size: 20px;
-    padding: 5px 20px;
-    font-weight: lighter;
-    text-transform: capitalize;
-    border-left: 3px solid white;
-}
-
-.highlights h1 {
-    font-size: 100px;
-    text-align: center;
-    font-weight: normal;
-}
-.highlights span{
-    color: red;
-}
-
-.highlights .tagline {
-    color: #d7d7d7;
-    font-size: 20px;
-    text-align: center;
-    font-weight: normal;
+.trainer .about {
+    width: 40%;
 
 }
 
-.join {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: 800;
-    padding: 5px 20px;
-    font-size: 20px;
-    margin-top: 20px;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    background: transparent;
-    text-transform: uppercase;
-    transition: .3s ease;
+.trainer .about h2 {
+    color: #212529;
+    font-size: 35px;
+    padding-bottom: 30px;
 }
 
-.join:hover {
-    color: #fff;
-    cursor: pointer;
-    letter-spacing: 1.5px;
-    background: red;
+.trainer .about p {
+    color: #7f8c8d;
+    font-size: 18px;
 }
 
-#gym-main-image{
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    display: block;
-    margin: 30px auto;
-}
-.images-container{
+.trainer .people {
+    width: 50%;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.gym-image{
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin: 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    cursor: pointer;            
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media screen and (max-width: 550px) {
-  .highlights h1{
-    font-size: 40px;
-  }
-  .join{
-    font-size: 12px;
-    padding: 3px 10px;
-  }
-  .tagline{
-    font-size: 10px;
-  }
+.trainer .people .team1 {
+    width: 45%;
+    height: auto;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow:
+        2.3px 2.6px 3.6px rgba(0, 0, 0, 0.035),
+        6.4px 7.3px 10px rgba(0, 0, 0, 0.05),
+        15.4px 17.5px 24.1px rgba(0, 0, 0, 0.065),
+        51px 58px 80px rgba(0, 0, 0, 0.1);
+
+}
+
+.trainer .people .team1 .img img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.trainer .people .team1 .name,
+.trainer .people .team1 .pro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trainer .people .team1 .name {
+    padding: 5px 20px 0 20px;
+}
+
+.trainer .people .team1 .name h4 {
+    font-size: 20px;
+    color: #212529;
+}
+
+.trainer .people .team1 .name i,
+.trainer .people .team1 .pro i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #212529;
+}
+
+.trainer .people .team1 .pro {
+    padding: 5px 20px 5px 20px;
+}
+
+.trainer .people .team1 .pro p {
+    color: #212529;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1042px) {}
+
+@media screen and (max-width: 991px) {
+    .mid p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .mid h2 {
+        font-size: 40px;
+    }
+
+    .mid .btn {
+        margin-top: 25px;
+    }
+
+    .mid .btn a {
+        font-size:  15px;
+    }
+
+    .mid .btn .simple {
+        padding: 11px 22px;
+    }
+
+    .mid .btn .border {
+        padding: 11px 22px;
+    }
+
+    .details {
+        padding: 96px 112px;
+    }
+
+    .details .one {
+        width: 50%;
+    }
+
+    .details .one h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .details .one p {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .details .one a {
+        font-size: 15px;
+    }
+
+    .details .two {
+        padding-left: 55px;
+    }
+
+    .details .two h3 {
+        font-size: 32px;
+    }
+
+    .details .two h5 {
+        font-size: 16px;
+    }
+
+    .details .two p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .trainer {
+        padding: 96px 112px;
+    }
+
+    .trainer .about h2 {
+        font-size: 32px;
+        padding-bottom: 22px;
+    }
+
+    .trainer .about p {
+        font-size: 16px;
+    }
+
+    .trainer .people .team1 {
+        width: 48%;
+    }
+
+    .trainer .people .team1 .name {
+        padding: 5px 15px 15px;
+    }
+
+    .trainer .people .team1 .name h4 {
+        font-size: 18px;
+    }
+
+    .trainer .people .team1 .name i,
+    .trainer .people .team1 .pro i {
+        font-size: 18px;
+    }
+    .trainer .people .team1 .pro{
+        padding:  0 15px 5px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .mid p {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .mid h2 {
+        font-size: 34px;
+    }
+
+    .mid .btn {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mid .btn .simple {
+        padding: 11px 22px;
+        margin-bottom: 7px;
+    }
+
+    .mid .btn .border {
+        padding: 11px 22px;
+    }
+
+    .details {
+        padding: 80px 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .details .one {
+        width: 70%;
+    }
+    .details .one a {
+        font-size: 16px;
+    }
+
+    .details .two {
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid #666262;
+        width: 70%;
+        margin-top: 28px;
+        padding-top: 28px;
+    }
+    .trainer {
+        padding: 80px 32px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .trainer .about{
+        width: 70%;
+        margin-bottom: 28px;
+    }
+    .trainer .people {
+        width: 70%;
+    }
+   
+}
+
+@media screen and (max-width: 496px) {
+    .mid p {
+        margin-bottom: 13px;
+    }
+
+    .mid h2 {
+        font-size: 29px;
+    }
+
+    .mid .btn {
+        margin-top: 11px;
+    }
+    .details {
+        padding: 64px 16px;
+    }
+
+    .details .one {
+        width: 100%;
+    }
   
+    .details .two {
+        width: 100%;
+    }
+    .trainer {
+        padding: 64px 16px;
+    }
+    .trainer .about{
+        width: 100%;
+    }
+    .trainer .people {
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .trainer .people .team1{
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }

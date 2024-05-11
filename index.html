@@ -10,69 +10,87 @@
 </head>
 
 <body>
-    <!--Home -->
+    <div class="back">
+        <div class="overlay"> </div>
+    </div>
 
-    <div class="home" id="home">
-        <div class="highlights">
-            <h3>feel the power with</h3>
-            <h1><b>Fitness<span>4</span>U</b></h1><br />
-            <p class="tagline">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit autem perferendis itaque facere, laborum
-                possimus quam ad nostrum odit expedita, assumenda veritatis perspiciatis sint doloremque odio placeat
-                architecto quae vero.
-            </p>
-            <button type="button" class="join">join now</button>
+    <div class="mid">
+        <p>New way to build a healthy lifestyle</p>
+        <h2>UPGRADE YOUR BODY AT FITNESS4YOU</h2>
+        <div class="btn">
+            <a href="#" class="simple">Get Started</a>
+            <a href="#" class="border">Learn more</a>
         </div>
     </div>
 
-    <!--End Home -->
-
-    <img src="./img/OIP.jpeg" alt="image not found" id="gym-main-image"  />
-    <div class="images-container">
-        <img src="./img/g7.jpg" alt="image not found" class="gym-image" onclick="change('g7')" />
-        <img src="./img/g8.jpg" alt="image not found" class="gym-image" onclick="change('g8')" />
-        <img src="./img/cardio.jpg" alt="image not found" class="gym-image" onclick="change('g3')" />
-        <img src="./img/g4.jpg" alt="image not found" class="gym-image" onclick="change('g4')" />
-        <img src="./img/g2.jpg" alt="image not found" class="gym-image" onclick="change('g2')" />
-        <img src="./img/g6.jpg" alt="image not found" class="gym-image" onclick="change('g6')" />
+    <div class="details">
+        <div class="one">
+            <h3>New to the Fitness4U?</h3>
+            <h6>Your membership is up to 2 months FREE (Rs.200 per month)</h6>
+            <p>Our Monthly fee is Rs.500 if you take 2 months admission then fee will be Rs.800
+            </p>
+            <a href="#">Become a member today</a>
+        </div>
+        <div class="two">
+            <h3>Working Hours</h3>
+            <br />
+            <h5>Sunday : Closed</h5>
+            <h5>Monday - Saterday</h5>
+            <p>5:00 AM - 10:00 PM</p>
+            <br />
+            <h5>Monday - Saterday</h5>
+            <p>5:00 AM - 10:00 PM</p>
+        </div>
     </div>
 
-    <script>
-        function change(path)
-        {
-            imgElement = document.getElementById('gym-main-image');
-            
-            if(path=='g7')
-            {
-                imgElement.src = "./img/g7.jpg";
-            }
-            else if(path=='g8')
-            {
-                imgElement.src = "./img/g8.jpg";
-            }
-            else if(path=='g3')
-            {
-                imgElement.src = "./img/cardio.jpg";
-            }
-            else if(path=='g4')
-            {
-                imgElement.src = "./img/g4.jpg";
-            }
-            else if(path=='g2')
-            {
-                imgElement.src = "./img/g2.jpg";
-            }
-            else if(path=='g6')
-            {
-                imgElement.src = "./img/g6.jpg";
-            }
-        }
+    <div class="trainer">
+        <div class="about">
+            <h2>Hello, We are Fitness4U</h2>
+            <p>Our gym is more than just a place to work out; it's a hub for wellness, motivation, and camaraderie.
+                Located in the heart of Babhaleshwar, our state-of-the-art facility offers a diverse range of
+                equipment and classes to cater to all fitness levels and interests.
+                <br /> <br />
+                Step inside our modern, spacious gym and you'll find a dynamic atmosphere buzzing with energy. Whether
+                you're a seasoned athlete or just starting your fitness journey, our expert staff is here to guide and
+                support you every step of the way.
+            </p>
+        </div>
+        <div class="people">
+            <div class="team1">
+                <div class="img">
+                    <img src="./img/about.jpg" alt="team1">
+                </div>
+                <div class="teamDetails">
+                    <div class="name">
+                        <h4>Mayur Darandale</h4>
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="pro">
+                        <p>Trainer</p>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
 
-    </script>
-   
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+            <div class="team1">
+                <div class="img">
+                    <img src="./img/rahul-about.jpg" alt="team1">
+                </div>
+                <div class="teamDetails">
+                    <div class="name">
+                        <h4>Rahul Haral</h4>
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="pro">
+                        <p>Trainer</p>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
