@@ -58,33 +58,35 @@
         <div class="people">
             <div class="team1">
                 <div class="img">
-                    <img src="./img/mayur-about.jpg" alt="team1">
+                    <img src="./img/mayur-about.jpg" alt="team1" onclick="description('trainer1')">
                 </div>
                 <div class="teamDetails">
                     <div class="name">
                         <h4>Mayur Darandale</h4>
-                        <i class="fa-brands fa-facebook-f"></i>
+                        <a href="https://www.facebook.com/mayur.darndale" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                     <div class="pro">
                         <p>Trainer</p>
-                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/md_mayur93?igsh=MWl6dDFpeDlldWxnMw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
+                    <div class="description" id="desc1"></div>
                 </div>
             </div>
 
             <div class="team1">
                 <div class="img">
-                    <img src="./img/rahul-about.jpg" alt="team1">
+                    <img src="./img/rahul-about.jpg" alt="team1"  onclick="description('trainer2')">
                 </div>
                 <div class="teamDetails">
                     <div class="name">
                         <h4>Rahul Haral</h4>
-                        <i class="fa-brands fa-facebook-f"></i>
+                        <a href="https://www.facebook.com/rahul.haral.54" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                     <div class="pro">
                         <p>Trainer</p>
-                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/haral.rahul?igsh=MWEzNTNudjl1YXlpdA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
+                    <div class="description" id="desc2"></div>
                 </div>
             </div>
         </div>
@@ -102,6 +104,23 @@
             dayElement.innerText = `${day} : ${day=="Sunday" ? "Closed" : "Opened"}`
         }
         day();
+
+        function description(trainer)
+        {
+            const desc1 = document.getElementById('desc1');
+            const desc2 = document.getElementById('desc2');
+
+            
+            if(trainer=="trainer1")
+            {
+                desc1.innerText = "20 Years Experiance";   
+            }
+            else
+            {
+                desc2.innerText = "10 Years Experiance";
+            }
+
+        }
     </script>
     <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>

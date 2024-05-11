@@ -191,6 +191,7 @@ body {
         6.4px 7.3px 10px rgba(0, 0, 0, 0.05),
         15.4px 17.5px 24.1px rgba(0, 0, 0, 0.065),
         51px 58px 80px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
 }
 
@@ -229,6 +230,10 @@ body {
 
 .trainer .people .team1 .pro p {
     color: #212529;
+}
+.description{
+    text-align: center;
+    padding: 10px;
 }
 
 /* Media Query */
