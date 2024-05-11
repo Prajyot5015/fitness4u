@@ -1,48 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../css/style.css" />
+    <link rel="stylesheet" href="./../css/about.css" />
     <title>Fitness4U</title>
-    <link rel="stylesheet" href="./css/style.css" />
 </head>
-
 <body>
-    <div class="back">
-        <div class="overlay"> </div>
-    </div>
-
-    <div class="mid">
-        <p>New way to build a healthy lifestyle</p>
-        <h2>UPGRADE YOUR BODY AT FITNESS<span class="four">4</span>U</h2>
-        <div class="btn">
-            <a href="#" class="simple">Get Started</a>
-            <a href="./pages/about.html" class="border">Learn more</a>
-        </div>
-    </div>
-
-    <div class="details">
-        <div class="one">
-            <h3>New to the Fitness<span class="four">4</span>U?</h3>
-            <h6>Your membership is up to 2 months FREE (Rs.200 per month)</h6>
-            <p>Our Monthly fee is Rs.500 if you take 2 months admission then fee will be Rs.800
-            </p>
-            <a href="#">Become a member today</a>
-        </div>
-        <div class="two">
-            <h3>Working Hours</h3>
-            <br />
-            <h5 id="day"></h5>
-            <h5>Monday - Saturday</h5>
-            <p>5:00 AM - 10:00 PM</p>
-            <br />
-            <h5>Monday - Saturday</h5>
-            <p>5:00 AM - 10:00 PM</p>
-        </div>
-    </div>
-
     <div class="trainer">
         <div class="about">
             <h2>Hello, We are Fitness<span class="four">4</span>U</h2>
@@ -58,7 +23,7 @@
         <div class="people">
             <div class="team1">
                 <div class="img">
-                    <img src="./img/mayur-about.jpg" alt="team1" onclick="description('trainer1')">
+                    <img src="./../img/mayur-about.jpg" alt="team1" onclick="description('trainer1')">
                 </div>
                 <div class="teamDetails">
                     <div class="name">
@@ -75,7 +40,7 @@
 
             <div class="team1">
                 <div class="img">
-                    <img src="./img/rahul-about.jpg" alt="team1"  onclick="description('trainer2')">
+                    <img src="./../img/rahul-about.jpg" alt="team1"  onclick="description('trainer2')">
                 </div>
                 <div class="teamDetails">
                     <div class="name">
@@ -92,19 +57,18 @@
         </div>
     </div>
 
+    <h2 class="see-gym">See Our GYM </h2>
+    <img src="./../img/OIP.jpeg" alt="image not found" id="product-main-image"  />
+    <div class="images-container">
+        <img src="./../img/g7.jpg" alt="image not found" class="product-image" onclick="change('g7')" />
+        <img src="./../img/g8.jpg" alt="image not found" class="product-image" onclick="change('g8')" />
+        <img src="./../img/g3.jpg" alt="image not found" class="product-image" onclick="change('g3')" />
+        <img src="./../img/g4.jpg" alt="image not found" class="product-image" onclick="change('g4')" />
+        <img src="./../img/g1.jpg" alt="image not found" class="product-image" onclick="change('g1')" />
+        <img src="./../img/g2.jpg" alt="image not found" class="product-image" onclick="change('g2')" />
+    </div>
+
     <script>
-        function day() {
-            const dayElement = document.getElementById('day');
-
-            const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-            const d = new Date();
-            const day = weekday[d.getDay()];
-            
-            dayElement.innerText = `${day} : ${day=="Sunday" ? "Closed" : "Opened"}`
-        }
-        day();
-
         function description(trainer)
         {
             const desc1 = document.getElementById('desc1');
@@ -121,8 +85,36 @@
             }
 
         }
+         function change(path)
+        {
+            imgElement = document.getElementById('product-main-image');
+            
+            if(path=='g7')
+            {
+                imgElement.src = "./../img/g7.jpg";
+            }
+            else if(path=='g8')
+            {
+                imgElement.src = "./../img/g8.jpg";
+            }
+            else if(path=='g3')
+            {
+                imgElement.src = "./../img/g3.jpg";
+            }
+            else if(path=='g4')
+            {
+                imgElement.src = "./../img/g4.jpg";
+            }
+            else if(path=='g1')
+            {
+                imgElement.src = "./../img/g1.jpg";
+            }
+            else if(path=='g2')
+            {
+                imgElement.src = "./../img/g2.jpg";
+            }
+        }
     </script>
     <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
-
 </html>

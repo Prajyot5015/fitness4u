@@ -1,0 +1,28 @@
+.see-gym{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+#product-main-image{
+    width: 80%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 30px auto;
+}
+.images-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-image{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;            
+}
