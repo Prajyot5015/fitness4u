@@ -233,6 +233,7 @@ body {
 }
 .description{
     text-align: center;
+    font-weight: bolder;
     padding: 10px;
 }
 
