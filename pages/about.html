@@ -79,6 +79,7 @@
             <button type="button" class="active" id="showAll" onclick="showAll()">Show All</button>
             <button type="button" id="bodyShow" onclick="bodyShow()">Body Show </button>
             <button type="button" id="prices" onclick="prices()">Prices </button>
+            <button type="button" id="videos" onclick="videos()">Videos</button>
         </div>
         <div class="img-container" id="img"> 
            <div class="imgs">
@@ -160,6 +161,7 @@
             document.getElementById('showAll').classList.add("active");
             document.getElementById('bodyShow').classList.remove("active");
             document.getElementById('prices').classList.remove("active");
+            document.getElementById('videos').classList.remove("active");
 
             imgElement.innerHTML = " ";
 
@@ -179,6 +181,7 @@
             document.getElementById('showAll').classList.remove("active");
             document.getElementById('bodyShow').classList.add("active");
             document.getElementById('prices').classList.remove("active");
+            document.getElementById('videos').classList.remove("active");
 
             imgElement.innerHTML = " ";
             for(let i = 0; i < imgs.length; i++)
@@ -198,6 +201,7 @@
             document.getElementById('showAll').classList.remove("active");
             document.getElementById('bodyShow').classList.remove("active");
             document.getElementById('prices').classList.add("active");
+            document.getElementById('videos').classList.remove("active");
             
             imgElement.innerHTML = " ";
 
@@ -208,8 +212,30 @@
             }
         }
 
+        function videos()
+        {
+            const imgs = ["./../video/group.mp4" , "./../video/mainTrainer.mp4" , "./../video/train.mp4" ,"./../video/workout.mp4"] ;
+
+            const imgElement = document.getElementById('img');
+            document.getElementById('showAll').classList.remove("active");
+            document.getElementById('bodyShow').classList.remove("active");
+            document.getElementById('prices').classList.remove("active");
+            document.getElementById('videos').classList.add("active");
+            
+            
+            imgElement.innerHTML = " ";
+
+            for(let i = 0; i < imgs.length; i++)
+            {
+                imgElement.innerHTML = imgElement.innerHTML + ` <div class="imgs">
+                    <video height="300px" width="300px" controls autoplay muted>
+                    <source src="${imgs[i]}" type="video/mp4" />
+                  </video>  </div>`;        
+            }
+        }
        
 
+       
     </script>
     <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
