@@ -1,9 +1,10 @@
-.see-gym{
+.see-gym {
     text-align: center;
     padding-top: 20px;
     font-size: 30px;
 }
-#product-main-image{
+
+#product-main-image {
     width: 80%;
     height: 500px;
     object-fit: cover;
@@ -12,17 +13,66 @@
     display: block;
     margin: 30px auto;
 }
-.images-container{
+
+.images-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.product-image{
+
+.product-image {
     width: 80px;
     height: 80px;
     object-fit: cover;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    cursor: pointer;            
+    cursor: pointer;
+}
+
+.gallary-container {
+    position: relative;
+    max-width: 1350px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallary-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-container .active {
+    background-color: red;
+    color: #fff;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.imgs img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 1px;
+    margin: 10px;
 }

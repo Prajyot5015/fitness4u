@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./../css/about.css" />
     <title>Fitness4U</title>
 </head>
+
 <body>
     <div class="trainer">
         <div class="about">
@@ -23,16 +25,18 @@
         <div class="people">
             <div class="team1">
                 <div class="img">
-                    <img src="./../img/mayur-about.jpg" alt="team1" onclick="description('trainer1')">
+                    <img src="./../img/trainer/mayur-about.jpg" alt="team1" onclick="description('trainer1')">
                 </div>
                 <div class="teamDetails">
                     <div class="name">
                         <h4>Mayur Darandale</h4>
-                        <a href="https://www.facebook.com/mayur.darndale" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/mayur.darndale" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
                     </div>
                     <div class="pro">
                         <p>Trainer</p>
-                        <a href="https://www.instagram.com/md_mayur93?igsh=MWl6dDFpeDlldWxnMw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/md_mayur93?igsh=MWl6dDFpeDlldWxnMw==" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div class="description" id="desc1"></div>
                 </div>
@@ -40,16 +44,18 @@
 
             <div class="team1">
                 <div class="img">
-                    <img src="./../img/rahul-about.jpg" alt="team1"  onclick="description('trainer2')">
+                    <img src="./../img/trainer/rahul-about.jpg" alt="team1" onclick="description('trainer2')">
                 </div>
                 <div class="teamDetails">
                     <div class="name">
                         <h4>Rahul Haral</h4>
-                        <a href="https://www.facebook.com/rahul.haral.54" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/rahul.haral.54" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
                     </div>
                     <div class="pro">
                         <p>Trainer</p>
-                        <a href="https://www.instagram.com/haral.rahul?igsh=MWEzNTNudjl1YXlpdA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/haral.rahul?igsh=MWEzNTNudjl1YXlpdA==" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div class="description" id="desc2"></div>
                 </div>
@@ -58,63 +64,154 @@
     </div>
 
     <h2 class="see-gym">See Our GYM </h2>
-    <img src="./../img/OIP.jpeg" alt="image not found" id="product-main-image"  />
+    <img src="./../img/gym/OIP.jpeg" alt="image not found" id="product-main-image" />
     <div class="images-container">
-        <img src="./../img/g7.jpg" alt="image not found" class="product-image" onclick="change('g7')" />
-        <img src="./../img/g8.jpg" alt="image not found" class="product-image" onclick="change('g8')" />
-        <img src="./../img/g3.jpg" alt="image not found" class="product-image" onclick="change('g3')" />
-        <img src="./../img/g4.jpg" alt="image not found" class="product-image" onclick="change('g4')" />
-        <img src="./../img/g1.jpg" alt="image not found" class="product-image" onclick="change('g1')" />
-        <img src="./../img/g2.jpg" alt="image not found" class="product-image" onclick="change('g2')" />
+        <img src="./../img/gym/g7.jpg" alt="image not found" class="product-image" onclick="change('g7')" />
+        <img src="./../img/gym/g8.jpg" alt="image not found" class="product-image" onclick="change('g8')" />
+        <img src="./../img/gym/g3.jpg" alt="image not found" class="product-image" onclick="change('g3')" />
+        <img src="./../img/gym/g4.jpg" alt="image not found" class="product-image" onclick="change('g4')" />
+        <img src="./../img/gym/g1.jpg" alt="image not found" class="product-image" onclick="change('g1')" />
+        <img src="./../img/gym/g2.jpg" alt="image not found" class="product-image" onclick="change('g2')" />
     </div>
 
+    <div class="gallary-container">
+        <div class="btn-container">
+            <button type="button" class="active" id="showAll" onclick="showAll()">Show All</button>
+            <button type="button" id="bodyShow" onclick="bodyShow()">Body Show </button>
+            <button type="button" id="prices" onclick="prices()">Prices </button>
+        </div>
+        <div class="img-container" id="img"> 
+           <div class="imgs">
+                <img src="./../img/gym/g6.jpg" alt="image not found" />                
+            </div>
+            
+            <div class="imgs">
+                <img src="./../img/back.jpg" alt="image not found" />                
+            </div>
+
+            <div class="imgs">
+                <img src= "./../img/trainer/rahul-1.jpg" alt="image not found" />                
+            </div>
+
+            <div class="imgs">
+                <img src="./../img/body-show/b5.jpg" alt="image not found" />                
+            </div>
+
+            <div class="imgs">
+                <img src="./../img/trainer/tr1.jpg" alt="image not found" />                
+            </div>
+
+            <div class="imgs">
+                <img src= "./../img/body-show/b2.jpg" alt="image not found" />                
+            </div> 
+
+            <div class="imgs">
+                <img src="./../img/body-show/b6.jpg" alt="image not found" />                
+            </div>
+
+            <div class="imgs">
+                <img src= "./../img/price/award.jpg" alt="image not found" />                
+            </div> 
+        </div>
+
     <script>
-        function description(trainer)
-        {
+        function description(trainer) {
             const desc1 = document.getElementById('desc1');
             const desc2 = document.getElementById('desc2');
 
-            
-            if(trainer=="trainer1")
-            {
-                desc1.innerText = "20 Years Experiance";   
+
+            if (trainer == "trainer1") {
+                desc1.innerText = "20 Years Experiance";
             }
-            else
-            {
+            else {
                 desc2.innerText = "10 Years Experiance";
             }
 
         }
-         function change(path)
-        {
+        function change(path) {
             imgElement = document.getElementById('product-main-image');
-            
-            if(path=='g7')
-            {
-                imgElement.src = "./../img/g7.jpg";
+
+            if (path == 'g7') {
+                imgElement.src = "./../img/gym/g7.jpg";
             }
-            else if(path=='g8')
-            {
-                imgElement.src = "./../img/g8.jpg";
+            else if (path == 'g8') {
+                imgElement.src = "./../img/gym/g8.jpg";
             }
-            else if(path=='g3')
-            {
-                imgElement.src = "./../img/g3.jpg";
+            else if (path == 'g3') {
+                imgElement.src = "./../img/gym/g3.jpg";
             }
-            else if(path=='g4')
-            {
-                imgElement.src = "./../img/g4.jpg";
+            else if (path == 'g4') {
+                imgElement.src = "./../img/gym/g4.jpg";
             }
-            else if(path=='g1')
-            {
-                imgElement.src = "./../img/g1.jpg";
+            else if (path == 'g1') {
+                imgElement.src = "./../img/gym/g1.jpg";
             }
-            else if(path=='g2')
-            {
-                imgElement.src = "./../img/g2.jpg";
+            else if (path == 'g2') {
+                imgElement.src = "./../img/gym/g2.jpg";
             }
         }
+        
+        function showAll()
+        {
+            const imgs = ["./../img/gym/g6.jpg" , "./../img/back.jpg" , "./../img/trainer/rahul-1.jpg" ,
+                            "./../img/body-show/b5.jpg", "./../img/trainer/tr1.jpg" , "./../img/body-show/b2.jpg" , "./../img/body-show/b6.jpg" , "./../img/price/award.jpg" ] ;
+
+            const imgElement = document.getElementById('img');
+            document.getElementById('showAll').classList.add("active");
+            document.getElementById('bodyShow').classList.remove("active");
+            document.getElementById('prices').classList.remove("active");
+
+            imgElement.innerHTML = " ";
+
+            for(let i = 0; i < imgs.length; i++)
+            {
+                imgElement.innerHTML = imgElement.innerHTML + ` <div class="imgs">
+                <img src=" ${imgs[i]}" alt="image not found" />    </div>`;        
+            }
+        }
+
+        function bodyShow()
+        {
+            const imgs = ["./../img/body-show/b1.jpg" , "./../img/body-show/b2.jpg" , "./../img/body-show/b3.jpg" ,
+                            "./../img/body-show/b5.jpg" , "./../img/price/b7.jpg" , "./../img/price/price.jpg" , "./../img/body-show/b6.jpg" , "./../img/body-show/event.jpg" ] ;
+
+            const imgElement = document.getElementById('img');
+            document.getElementById('showAll').classList.remove("active");
+            document.getElementById('bodyShow').classList.add("active");
+            document.getElementById('prices').classList.remove("active");
+
+            imgElement.innerHTML = " ";
+            for(let i = 0; i < imgs.length; i++)
+            {
+                imgElement.innerHTML = imgElement.innerHTML + ` <div class="imgs">
+                <img src=" ${imgs[i]}" alt="image not found" />   </div>`;
+            }
+        }
+
+        function prices()
+        {
+            const imgs = ["./../img/price/award.jpg" , "./../img/price/b4.jpg" , "./../img/price/b7.jpg" ,
+                            "./../img/body-show/b3.jpg" , "./../img/body-show/b2.jpg" , "./../img/body-show/b6.jpg",
+                             "./../img/price/trainer.jpg" , "./../img/price/price2.jpg" ] ;
+
+            const imgElement = document.getElementById('img');
+            document.getElementById('showAll').classList.remove("active");
+            document.getElementById('bodyShow').classList.remove("active");
+            document.getElementById('prices').classList.add("active");
+            
+            imgElement.innerHTML = " ";
+
+            for(let i = 0; i < imgs.length; i++)
+            {
+                imgElement.innerHTML = imgElement.innerHTML + ` <div class="imgs">
+                <img src=" ${imgs[i]}" alt="image not found" />    </div>`;        
+            }
+        }
+
+       
+
     </script>
     <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
