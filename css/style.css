@@ -8,7 +8,22 @@ body {
     background-color: #171819;
     color: #fff;
 }
+.btn {
+    color: #fff;
+    background: #f13a11;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
 
+.btn:hover {
+    background: #fff;
+    color: #f13a11;
+}
 .back {
     background-image: url(./../img/gym/bg-home.webp);
     width: 100%;
@@ -48,37 +63,39 @@ body {
     color: #f13a11;
 }
 
-.mid .btn {
+.mid .btn-container {
     margin-top: 25px;
 }
 
-.mid .btn a {
+.mid .btn-container a {
     text-decoration: none;
     text-transform: uppercase;
 
 }
 
-.mid .btn .simple {
+.mid .btn-container .simple {
     color: #fff;
     font-weight: 500;
     padding: 10px 20px;
 }
 
-.mid .btn .simple:hover {
+.mid .btn-container .simple:hover {
     color: #ff5733;
 }
 
-.mid .btn .border {
-    color: #ff5733;
-    border: 1px solid #ff5733;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 5px;
+.mid .btn-container .border {
+    color: #fff;
+    background: #f13a11;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.mid .btn .border:hover {
+.mid .btn-container .border:hover {
     background: #fff;
-    border: 1px solid #fff;
+    color: #f13a11;
 }
 
 .details {
@@ -111,21 +128,6 @@ body {
     color: #666262;
     font-size: 20px;
     padding-bottom: 50px;
-}
-
-.details .one a {
-    color: #fff;
-    background: #f13a11;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.details .one a:hover {
-    background: #fff;
-    color: #f13a11;
 }
 
 .details .two {
@@ -171,6 +173,13 @@ body {
 .trainer .about p {
     color: #7f8c8d;
     font-size: 18px;
+}
+.trainer .about .btn{
+    display: block;
+    margin: 15px auto;
+}
+a{
+    text-decoration: none;
 }
 
 .trainer .people {
@@ -251,19 +260,19 @@ body {
         font-size: 40px;
     }
 
-    .mid .btn {
+    .mid .btn-container {
         margin-top: 25px;
     }
 
-    .mid .btn a {
+    .mid .btn-container-container a {
         font-size:  15px;
     }
 
-    .mid .btn .simple {
+    .mid .btn-container .simple {
         padding: 11px 22px;
     }
 
-    .mid .btn .border {
+    .mid .btn-container .border {
         padding: 11px 22px;
     }
 
@@ -351,19 +360,19 @@ body {
         font-size: 34px;
     }
 
-    .mid .btn {
+    .mid .btn-container {
         margin-top: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .mid .btn .simple {
+    .mid .btn-container .simple {
         padding: 11px 22px;
         margin-bottom: 7px;
     }
 
-    .mid .btn .border {
+    .mid .btn-container .border {
         padding: 11px 22px;
     }
 
@@ -413,7 +422,7 @@ body {
         font-size: 29px;
     }
 
-    .mid .btn {
+    .mid .btn-container {
         margin-top: 11px;
     }
     .details {
