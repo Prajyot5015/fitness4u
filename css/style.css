@@ -151,8 +151,6 @@ body {
 }
 
 .trainer {
-    background: #f9f9f9;
-    color: #171819;
     padding: 120px;
     display: flex;
     justify-content: space-between;
@@ -165,7 +163,6 @@ body {
 }
 
 .trainer .about h2 {
-    color: #212529;
     font-size: 35px;
     padding-bottom: 30px;
 }
@@ -195,11 +192,7 @@ a{
     box-sizing: border-box;
     background: #fff;
     border-radius: 10px;
-    box-shadow:
-        2.3px 2.6px 3.6px rgba(0, 0, 0, 0.035),
-        6.4px 7.3px 10px rgba(0, 0, 0, 0.05),
-        15.4px 17.5px 24.1px rgba(0, 0, 0, 0.065),
-        51px 58px 80px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px black;
     cursor: pointer;
 
 }
@@ -245,7 +238,34 @@ a{
     font-weight: bolder;
     padding: 10px;
 }
-
+.heading-process{
+    text-align: center;
+    padding: 20px;
+}
+.processes{
+    display: flex;
+    justify-content: center;    
+    flex-wrap: wrap;
+}
+.processes .card{
+    width: 200px;
+    height: 180px;
+    border: 2px solid #666262;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+}
+.processes .card i{
+    margin: 30px;
+    padding: 20px;
+    background-color: #f13a11;
+    border-radius: 50%;
+    font-size: 40px;
+}
+.processes .card h2{
+    font-size: 15px;
+    text-transform: uppercase;
+}
 /* Media Query */
 
 @media screen and (max-width: 1042px) {}
