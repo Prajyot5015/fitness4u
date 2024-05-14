@@ -52,7 +52,8 @@
 
         <div class="product-price">
           <p class="last-price">M.R.P.: <span>₹ 3,699</span></p>
-          <p class="new-price">Price: <span>₹ 2200 </span></p>
+          <p class="new-price">Price: <span id="total-price">₹ 2200 </span></p>
+          <p class="new-price">Quantity: <span id="quantity-total"> 1 </span></p>
         </div>
 
         <div class="product-detail">
@@ -106,6 +107,38 @@
             }
         }
 
+        const quantityText = document.getElementById('quantity-text');
+        const quantityTotal = document.getElementById('quantity-total');
+        const totalPrice = document.getElementById('total-price');
+
+        function increment() {
+            let quantity = parseInt(quantityText.innerText);
+
+            if (quantity < 5) {
+                quantityText.innerText = ++quantity;
+            }
+            else {
+                alert("You can't buy more than 5 products");
+            }
+            setQuantityandToatal(quantity);
+        }
+
+        function decrement() {
+            let quantity = parseInt(quantityText.innerText);
+
+            if (quantity > 1) {
+                quantityText.innerText = --quantity;
+            }
+            else {
+                alert("Buy minimum 1 product");
+            }
+            setQuantityandToatal(quantity);
+        }
+
+        function setQuantityandToatal(quantity) {
+            quantityTotal.innerText = ` ${quantity}`;
+            totalPrice.innerText = `₹ ${2200 * quantity}`;
+        }
   </script>
 </body>
 </html>
