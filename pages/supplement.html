@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Product Card/Page</title>
+  <title>Fitness4U</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
@@ -53,7 +52,7 @@
         <div class="product-price">
           <p class="last-price">M.R.P.: <span id="mrp">₹ 3,699</span></p>
           <p class="new-price">Price: <span>₹ <span id="price">2200 </span> </span></p>
-          <p class="new-price">Total: <span id="total-quantity"> 2200  (1) </span></p>
+          <p class="new-price">Total: <span id="total-quantity"> 2200 (1) </span></p>
         </div>
 
         <div class="product-detail">
@@ -93,7 +92,7 @@
         <div class="product-info">
           <h4 class="pro-title">Whey Protein Powder</h4>
           <p class="pro-price">₹ 2,200</p>
-          <a href="#" class="btn">Buy Now</a>
+          <a href="#product-container" class="btn" onclick="details('product1')">Buy Now</a>
         </div>
       </div>
 
@@ -102,7 +101,7 @@
         <div class="product-info">
           <h4 class="pro-title"> Mass Gainer</h4>
           <p class="pro-price">₹ 1,149</p>
-          <a href="#product-container" class="btn" onclick="details()">Buy Now</a>
+          <a href="#product-container" class="btn" onclick="details('product2')">Buy Now</a>
         </div>
       </div>
 
@@ -111,23 +110,23 @@
         <div class="product-info">
           <h4 class="pro-title"> Bolt Nutrition BCAA</h4>
           <p class="pro-price">₹ 599</p>
-          <a href="#" class="btn">Buy Now</a>
+          <a href="#product-container" class="btn" onclick="details('product3')">Buy Now</a>
         </div>
       </div>
 
       <div class="product">
         <img src="./../img/supplement/cutting/c1.png" alt="supplement image" />
         <div class="product-info">
-          <h4 class="pro-title"> ProQuest Nutrition Power</h4>
+          <h4 class="pro-title"> Nutrition Power</h4>
           <p class="pro-price">₹ 3499</p>
-          <a href="#" class="btn">Buy Now</a>
+          <a href="#product-container" class="btn" onclick="details('product4')">Buy Now</a>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-     const data = {
+    const data = {
       "product1": {
         "name": " Whey Protein Powder",
         "MRP": "3,699",
@@ -154,22 +153,112 @@
         "name": "Bolt Nutrition BCAA",
         "MRP": "999",
         "price": "599",
-        "desc": "Muscle Recovery and Support: – Instantized BCAA powder provides 5g Branched Chain Amino Acids in each 8g serving, In The Preferred 2:1:1 Ratio Of Leucine To Isoleucine And Valine, to support muscle recovery and endurance.Intra-workout Support : Help Spare Muscle During Endurance Exercise* BCAAs Have Long Been Used By Strength And Endurance Athletes In Combination With Intense Training100% VEGAN BCAAS: With 5 g of BCAAs in each serving, this intra-workout drink helps provide rich amino acids during workout to minimize catabolism and in stimulating muscle synthesis",
+        "desc": "Muscle Recovery and Support: – Instantized BCAA powder provides 5g Branched Chain Amino Acids in each 8g serving, In The Preferred 2:1:1 Ratio Of Leucine To Isoleucine And Valine, to support muscle recovery and endurance.Intra-workout Support : Help Spare Muscle During Endurance Exercise* BCAAs Have Long Been Used By Strength And Endurance Athletes In Combination With Intense Training100% VEGAN BCAAS: With 5 g of BCAAs in each serving, this intra-workout drink helps provide rich amino acids during workout.",
         "brand": "Bolt",
         "flavour": "Watermelon Fizz",
-        "img": ["./../img/supplement/bcaa/b1.png", "./../img/supplement/bcaa/b2.png", "./../img/supplement/bcaa/b3.png",
-          "./../img/supplement/bcaa/b4.png"],
+        "img": ["./../img/supplement/bcaa/b1.png", "./../img/supplement/bcaa/b2.png", "./../img/supplement/bcaa/b3.jpg",
+          "./../img/supplement/bcaa/b4.jpg"],
       },
 
       "product4": {
-        "name": "ProQuest Nutrition Power",
+        "name": " Nutrition Power",
         "MRP": "6,499",
         "price": "3499",
-        "desc": "ADVANCE WHEY BLEND: ProQuest Nutrition Premium Blend of Advance Whey Protein (Hydrolyzed, Isolate & Concentrate) its delivers the fast absorption of peptides, Isolate – fully purest form of whey protein.WHEY PERFORMANCE: ProQuest advance whey protein new and improved Performance & Faster Recovery - Contain 3.5g BCAAs that provide extream fast recovery from longer workout by decreasing muscle soreness after hard workouts.ADDED ENZYME: ProQuest Nutrition Advance whey Protein have Digezyme latest Digestive Enzymes Technology. Digezyme are different researched combination of Gluten Free.",
+        "desc": "ADVANCE WHEY BLEND: ProQuest Nutrition Premium Blend of Advance Whey Protein (Hydrolyzed, Isolate & Concentrate) its delivers the fast absorption of peptides, Isolate – fully purest form of whey protein.WHEY PERFORMANCE: ProQuest advance whey protein new and improved Performance & Faster Recovery - Contain 3.5g BCAAs that provide extream fast recovery from longer workout by decreasing muscle soreness after hard workouts.ADDED ENZYME: ProQuest Nutrition Advance whey Protein have Digezyme latest Digestive Enzymes Technology.",
         "brand": "Proquest",
         "flavour": "Coffee",
-        "img": ["./../img/supplement/cutting/c1.png", "./../img/supplement/cutting/c2.png", "./../img/supplement/cutting/c2.png",
-          "./../img/supplement/cutting/c4.png"],
+        "img": ["./../img/supplement/cutting/c1.png", "./../img/supplement/cutting/c2.png", "./../img/supplement/cutting/c3.jpg",
+          "./../img/supplement/cutting/c5.jpg"],
+      }
+    }
+
+    function details(product) {
+      const bigImg = document.getElementById('product-main-image');
+      const smallImg = document.getElementById('small-imgs');
+      const productTitle = document.getElementById('product-title');
+      const totalPrice = document.getElementById('price');
+      const about = document.getElementById('desc');
+      const brand = document.getElementById('brand');
+      const flavour = document.getElementById('flavour');
+      const quantityTotal = document.getElementById('total-quantity');
+      const quantityText = document.getElementById('quantity-text');
+      const mrp = document.getElementById('mrp');
+
+      if(product == "product1")
+      {
+        bigImg.src = `${data.product1.img[0]}`;
+        smallImg.innerHTML = "";
+
+        for (let i = 0; i < data.product1.img.length; i++) {
+          smallImg.innerHTML = smallImg.innerHTML + `<div class="img-item">
+                           <img src="${data.product1.img[i]}" alt="supplement image"  onclick="change('${i + 1}','product1')"/>  </div>`;
+        }
+
+        productTitle.innerText = `${data.product1.name}`;
+        mrp.innerText = `₹ ${data.product1.MRP}`;
+        totalPrice.innerText = ` ${data.product1.price}`;
+        about.innerText = `${data.product1.desc} `;
+        brand.innerText = `${data.product1.brand} `;
+        flavour.innerText = `${data.product1.flavour} `;
+        quantityText.innerText = "1";
+        quantityTotal.innerText = `${data.product1.price} (1)`;
+      }
+
+      else if (product == "product2") {
+        bigImg.src = `${data.product2.img[0]}`;
+        smallImg.innerHTML = "";
+
+        for (let i = 0; i < data.product2.img.length; i++) {
+          smallImg.innerHTML = smallImg.innerHTML + `<div class="img-item">
+                           <img src="${data.product2.img[i]}" alt="supplement image"  onclick="change('${i + 1}','product2')"/>  </div>`;
+        }
+
+        productTitle.innerText = `${data.product2.name}`;
+        mrp.innerText = `₹ ${data.product2.MRP}`;
+        totalPrice.innerText = ` ${data.product2.price}`;
+        about.innerText = `${data.product2.desc} `;
+        brand.innerText = `${data.product2.brand} `;
+        flavour.innerText = `${data.product2.flavour} `;
+        quantityText.innerText = "1";
+        quantityTotal.innerText = `${data.product2.price} (1)`;
+      }
+
+      else if (product == "product3") {
+        bigImg.src = `${data.product3.img[0]}`;
+        smallImg.innerHTML = "";
+
+        for (let i = 0; i < data.product3.img.length; i++) {
+          smallImg.innerHTML = smallImg.innerHTML + `<div class="img-item">
+                           <img src="${data.product3.img[i]}" alt="supplement image"  onclick="change('${i + 1}','product3')"/>  </div>`;
+        }
+
+        productTitle.innerText = `${data.product3.name}`;
+        mrp.innerText = `₹ ${data.product3.MRP}`;
+        totalPrice.innerText = ` ${data.product3.price}`;
+        about.innerText = `${data.product3.desc} `;
+        brand.innerText = `${data.product3.brand} `;
+        flavour.innerText = `${data.product3.flavour} `;
+        quantityText.innerText = "1";
+        quantityTotal.innerText = `${data.product3.price} (1)`;
+      }
+
+      else if (product == "product4") {
+        bigImg.src = `${data.product4.img[0]}`;
+        smallImg.innerHTML = "";
+
+        for (let i = 0; i < data.product4.img.length; i++) {
+          smallImg.innerHTML = smallImg.innerHTML + `<div class="img-item">
+                           <img src="${data.product4.img[i]}" alt="supplement image"  onclick="change('${i + 1}','product4')"/>  </div>`;
+        }
+
+        productTitle.innerText = `${data.product4.name}`;
+        mrp.innerText = `₹ ${data.product4.MRP}`;
+        totalPrice.innerText = ` ${data.product4.price}`;
+        about.innerText = `${data.product4.desc} `;
+        brand.innerText = `${data.product4.brand} `;
+        flavour.innerText = `${data.product4.flavour} `;
+        quantityText.innerText = "1";
+        quantityTotal.innerText = `${data.product4.price} (1)`;
       }
     }
 
@@ -189,6 +278,7 @@
           imgElement.src = `${data.product1.img[3]} `;
         }
       }
+
       else if (product == "product2") {
         if (path == 1) {
           imgElement.src = `${data.product2.img[0]} `;
@@ -204,6 +294,36 @@
         }
       }
 
+      else if (product == "product3") {
+        if (path == 1) {
+          imgElement.src = `${data.product3.img[0]} `;
+        }
+        else if (path == 2) {
+          imgElement.src = `${data.product3.img[1]} `;
+        }
+        else if (path == 3) {
+          imgElement.src = `${data.product3.img[2]} `;
+        }
+        else if (path == 4) {
+          imgElement.src = `${data.product3.img[3]} `;
+        }
+      }
+
+      else if (product == "product4") {
+        if (path == 1) {
+          imgElement.src = `${data.product4.img[0]} `;
+        }
+        else if (path == 2) {
+          imgElement.src = `${data.product4.img[1]} `;
+        }
+        else if (path == 3) {
+          imgElement.src = `${data.product4.img[2]} `;
+        }
+        else if (path == 4) {
+          imgElement.src = `${data.product4.img[3]} `;
+        }
+      }
+
     }
 
     function increment() {
@@ -211,9 +331,6 @@
       const quantityTotal = document.getElementById('total-quantity');
       const totalPrice = document.getElementById('price');
       let quantity = parseInt(quantityText.innerText);
-      
-      const p = parseInt(totalPrice.innerText);
-      console.log(p);
 
       if (quantity < 5) {
         quantityText.innerText = ++quantity;
@@ -221,7 +338,7 @@
       else {
         alert("You can't buy more than 5 products");
       }
-      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} (${quantity})`;  
+      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} (${quantity})`;
     }
 
     function decrement() {
@@ -236,39 +353,9 @@
       else {
         alert("Buy minimum 1 product");
       }
-      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} (${quantity})`;      
+      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} (${quantity})`;
     }
 
-    function details() {
-      const bigImg = document.getElementById('product-main-image');
-      const smallImg = document.getElementById('small-imgs');
-      const productTitle = document.getElementById('product-title');
-      const totalPrice = document.getElementById('price');
-      const about = document.getElementById('desc');
-      const brand = document.getElementById('brand');
-      const flavour = document.getElementById('flavour');
-      const quantityTotal = document.getElementById('total-quantity');
-      const quantityText = document.getElementById('quantity-text');
-      const mrp = document.getElementById('mrp');
-
-      bigImg.src = `${data.product2.img[0]}`;
-      smallImg.innerHTML = "";
-
-      for (let i = 0; i < data.product2.img.length; i++) {
-        smallImg.innerHTML = smallImg.innerHTML + `<div class="img-item">
-                           <img src="${data.product2.img[i]}" alt="supplement image"  onclick="change('${i + 1}','product2')"/>  </div>`;
-      }
-
-      productTitle.innerText = `${data.product2.name}`;
-      mrp.innerText = `₹ ${data.product2.MRP}`;
-      totalPrice.innerText = ` ${data.product2.price}`;
-      about.innerText = `${data.product2.desc} `;
-      brand.innerText = `${data.product2.brand} `;
-      flavour.innerText = `${data.product2.flavour} `;
-      quantityText.innerText = "1";  
-      quantityTotal.innerText = `${data.product2.price} (1)`;
-    }
   </script>
 </body>
-
 </html>
