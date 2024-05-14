@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class=" product-container">
+  <div class=" product-container" id="product-container">
     <div class=" product-card">
       <div class="product-imgs">
         <div class="img-display">
@@ -22,24 +22,24 @@
             <img src="./../img/supplement/whey/w1.png" alt="supplement image" id="product-main-image" />
           </div>
         </div>
-        <div class="img-select">
+        <div class="img-select" id="small-imgs">
           <div class="img-item">
-            <img src="./../img/supplement/whey/w1.png" alt="supplement image"  onclick="change('1')"/>
+            <img src="./../img/supplement/whey/w1.png" alt="supplement image" onclick="change('1','product1')" />
           </div>
           <div class="img-item">
-            <img src="./../img/supplement/whey/w2.png" alt="supplement image" onclick="change('2')" />
+            <img src="./../img/supplement/whey/w2.png" alt="supplement image" onclick="change('2','product1')" />
           </div>
           <div class="img-item">
-            <img src="./../img/supplement/whey/w3.jpg" alt="supplement image" onclick="change('3')" />
+            <img src="./../img/supplement/whey/w3.jpg" alt="supplement image" onclick="change('3','product1')" />
           </div>
           <div class="img-item">
-            <img src="./../img/supplement/whey/w4.jpg" alt="supplement image" onclick="change('4')" />
+            <img src="./../img/supplement/whey/w4.jpg" alt="supplement image" onclick="change('4','product1')" />
           </div>
         </div>
       </div>
 
       <div class="product-content">
-        <h2 class="product-title"> Whey Protein Powder</h2>
+        <h2 class="product-title" id="product-title"> Whey Protein Powder</h2>
         <a href="#" class="product-link">visit our store</a>
         <div class="product-rating">
           <i class="fas fa-star"></i>
@@ -51,14 +51,15 @@
         </div>
 
         <div class="product-price">
-          <p class="last-price">M.R.P.: <span>₹ 3,699</span></p>
-          <p class="new-price">Price: <span id="total-price">₹ 2200 </span></p>
-          <p class="new-price">Quantity: <span id="quantity-total"> 1 </span></p>
+          <p class="last-price">M.R.P.: <span id="mrp">₹ 3,699</span></p>
+          <p class="new-price">Price: <span>₹ <span id="price">2200 </span> </span></p>
+          <p class="new-price">Total: <span id="total-quantity"> 2200  (1) </span></p>
         </div>
 
         <div class="product-detail">
           <h2>about this item: </h2>
-          <p>[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for building muscle.
+          <p id="desc">[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for
+            building muscle.
             <br />
             [GREATER STRENGTH]: 3g of fast-absorbing creatine monohydrate for superior muscle gains and strength. <br />
             [FASTER RECOVERY]: Rich in BCAAs and Glutamic acid which ensures faster muscle recovery and growth after an
@@ -67,8 +68,8 @@
             concentration of amino acids, it enhances the body's immunity. <br />
           </p>
           <ul>
-            <li>Brand: <span>Nutrabay</span></li>
-            <li>Flavour: <span>Chocolate</span></li>
+            <li>Brand: <span id="brand">Nutrabay</span></li>
+            <li>Flavour: <span id="flavour">Chocolate</span></li>
             <li>Age Range: <span>Adult</span></li>
             <li>Product Benefits : <span>Muscle Growth</span></li>
           </ul>
@@ -84,61 +85,190 @@
     </div>
   </div>
 
+  <div class="products">
+    <h1>Our Products</h1>
+    <div class="all-products">
+      <div class="product">
+        <img src="./../img/supplement/whey/w1.png" alt="supplement image" />
+        <div class="product-info">
+          <h4 class="pro-title">Whey Protein Powder</h4>
+          <p class="pro-price">₹ 2,200</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="./../img/supplement/mass-gainer/m1.png" alt="supplement image" />
+        <div class="product-info">
+          <h4 class="pro-title"> Mass Gainer</h4>
+          <p class="pro-price">₹ 1,149</p>
+          <a href="#product-container" class="btn" onclick="details()">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="./../img/supplement/whey/w1.png" alt="supplement image" />
+        <div class="product-info">
+          <h4 class="pro-title"> title</h4>
+          <p class="pro-price">$400</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="./../img/supplement/whey/w1.png" alt="supplement image" />
+        <div class="product-info">
+          <h4 class="pro-title"> title</h4>
+          <p class="pro-price">$400</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
-     function change(path)
-        {
-            imgElement = document.getElementById('product-main-image');
-            
-            if(path==1)
-            {
-                imgElement.src = "./../img/supplement/whey/w1.png";
-            }
-            else if(path==2)
-            {
-                imgElement.src = "./../img/supplement/whey/w2.png";
-            }
-            else if(path==3)
-            {
-                imgElement.src = "./../img/supplement/whey/w3.jpg";
-            }
-            else if(path==4)
-            {
-                imgElement.src = "./../img/supplement/whey/w4.jpg";
-            }
+     const data = {
+      "product1": {
+        "name": " Whey Protein Powder",
+        "MRP": "3,699",
+        "price": "2200",
+        "desc": "[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for building muscle.[GREATER STRENGTH]: 3g of fast-absorbing creatine monohydrate for superior muscle gains and strength.[FASTER RECOVERY]: Rich in BCAAs and Glutamic acid which ensures faster muscle recovery and growth after an intense workout.[BUILD IMMUNITY]: The antibodies that help fight diseases are actually made of protein and with a high concentration of amino acids, it enhances the body's immunity.",
+        "brand": "Nutrabay",
+        "flavour": "chocolate",
+        "img": ["./../img/supplement/whey/w1.png", "./../img/supplement/whey/w2.png", "./../img/supplement/whey/w3.jpg",
+          "./../img/supplement/whey/w4.jpg"],
+      },
+
+      "product2": {
+        "name": "Mass Gainer",
+        "MRP": "2,499",
+        "price": "1149",
+        "desc": "Regular Mass Gainer will let you fulfill the calorie requirements in the body. With the presence of calories you can attain all the calories that will let you gain muscle mass and you can perform more and for a longer time.Regular Mass Gainer will provide protein from high quality protein sources such as Whey and Casein. They are perfect to deliver the supreme quality of protein that will fulfill the requirement of protein in your body. With the presence of protein in this gainer you can gain muscle mass.",
+        "brand": "26 INCHES NUTRITION INC",
+        "flavour": "chocolate",
+        "img": ["./../img/supplement/mass-gainer/m1.png", "./../img/supplement/mass-gainer/m2.png", "./../img/supplement/mass-gainer/m3.png",
+          "./../img/supplement/mass-gainer/m4.jpg"],
+      },
+
+      "product3": {
+        "name": " Whey Protein Powder",
+        "MRP": "3,699",
+        "price": "2,200",
+        "desc": "abut information",
+        "brand": "Nutrabay",
+        "flavour": "chocolate",
+        "img": ["./../img/supplement/whey/w1.png", "./../img/supplement/whey/w2.png", "./../img/supplement/whey/w3.png",
+          "./../img/supplement/whey/w4.png"],
+      },
+
+      "product4": {
+        "name": " Whey Protein Powder",
+        "MRP": "3,699",
+        "price": "2,200",
+        "desc": "abut information",
+        "brand": "Nutrabay",
+        "flavour": "chocolate",
+        "img": ["./../img/supplement/whey/w1.png", "./../img/supplement/whey/w2.png", "./../img/supplement/whey/w3.png",
+          "./../img/supplement/whey/w4.png"],
+      }
+    }
+
+    function change(path, product) {
+      const imgElement = document.getElementById('product-main-image');
+      if (product == "product1") {
+        if (path == 1) {
+          imgElement.src = `${data.product1.img[0]} `;
         }
-
-        const quantityText = document.getElementById('quantity-text');
-        const quantityTotal = document.getElementById('quantity-total');
-        const totalPrice = document.getElementById('total-price');
-
-        function increment() {
-            let quantity = parseInt(quantityText.innerText);
-
-            if (quantity < 5) {
-                quantityText.innerText = ++quantity;
-            }
-            else {
-                alert("You can't buy more than 5 products");
-            }
-            setQuantityandToatal(quantity);
+        else if (path == 2) {
+          imgElement.src = `${data.product1.img[1]} `;
         }
-
-        function decrement() {
-            let quantity = parseInt(quantityText.innerText);
-
-            if (quantity > 1) {
-                quantityText.innerText = --quantity;
-            }
-            else {
-                alert("Buy minimum 1 product");
-            }
-            setQuantityandToatal(quantity);
+        else if (path == 3) {
+          imgElement.src = `${data.product1.img[2]} `;
         }
-
-        function setQuantityandToatal(quantity) {
-            quantityTotal.innerText = ` ${quantity}`;
-            totalPrice.innerText = `₹ ${2200 * quantity}`;
+        else if (path == 4) {
+          imgElement.src = `${data.product1.img[3]} `;
         }
+      }
+      else if (product == "product2") {
+        if (path == 1) {
+          imgElement.src = `${data.product2.img[0]} `;
+        }
+        else if (path == 2) {
+          imgElement.src = `${data.product2.img[1]} `;
+        }
+        else if (path == 3) {
+          imgElement.src = `${data.product2.img[2]} `;
+        }
+        else if (path == 4) {
+          imgElement.src = `${data.product2.img[3]} `;
+        }
+      }
+
+    }
+
+    function increment() {
+      const quantityText = document.getElementById('quantity-text');
+      const quantityTotal = document.getElementById('total-quantity');
+      const totalPrice = document.getElementById('price');
+      let quantity = parseInt(quantityText.innerText);
+      
+      const p = parseInt(totalPrice.innerText);
+      console.log(p);
+
+      if (quantity < 5) {
+        quantityText.innerText = ++quantity;
+      }
+      else {
+        alert("You can't buy more than 5 products");
+      }
+      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} (${quantity})`;  
+    }
+
+    function decrement() {
+      const quantityText = document.getElementById('quantity-text');
+      const quantityTotal = document.getElementById('total-quantity');
+      const totalPrice = document.getElementById('price');
+      let quantity = parseInt(quantityText.innerText);
+
+      if (quantity > 1) {
+        quantityText.innerText = --quantity;
+      }
+      else {
+        alert("Buy minimum 1 product");
+      }
+      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} (${quantity})`;      
+    }
+
+    function details() {
+      const bigImg = document.getElementById('product-main-image');
+      const smallImg = document.getElementById('small-imgs');
+      const productTitle = document.getElementById('product-title');
+      const totalPrice = document.getElementById('price');
+      const about = document.getElementById('desc');
+      const brand = document.getElementById('brand');
+      const flavour = document.getElementById('flavour');
+      const quantityTotal = document.getElementById('total-quantity');
+      const quantityText = document.getElementById('quantity-text');
+      const mrp = document.getElementById('mrp');
+
+      bigImg.src = `${data.product2.img[0]}`;
+      smallImg.innerHTML = "";
+
+      for (let i = 0; i < data.product2.img.length; i++) {
+        smallImg.innerHTML = smallImg.innerHTML + `<div class="img-item">
+                           <img src="${data.product2.img[i]}" alt="supplement image"  onclick="change('${i + 1}','product2')"/>  </div>`;
+      }
+
+      productTitle.innerText = `${data.product2.name}`;
+      mrp.innerText = `₹ ${data.product2.MRP}`;
+      totalPrice.innerText = ` ${data.product2.price}`;
+      about.innerText = `${data.product2.desc} `;
+      brand.innerText = `${data.product2.brand} `;
+      flavour.innerText = `${data.product2.flavour} `;
+      quantityText.innerText = "1";  
+      quantityTotal.innerText = `${data.product2.price} (1)`;
+    }
   </script>
 </body>
+
 </html>
