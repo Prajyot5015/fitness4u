@@ -19,21 +19,21 @@
       <div class="product-imgs">
         <div class="img-display">
           <div class="img-showcase">
-            <img src="./../img/supplement/whey/w1.png" alt="supplement image" />
+            <img src="./../img/supplement/whey/w1.png" alt="supplement image" id="product-main-image" />
           </div>
         </div>
         <div class="img-select">
           <div class="img-item">
-            <img src="./../img/supplement/whey/w1.png" alt="supplement image" />
+            <img src="./../img/supplement/whey/w1.png" alt="supplement image"  onclick="change('1')"/>
           </div>
           <div class="img-item">
-            <img src="./../img/supplement/whey/w2.png" alt="supplement image" />
+            <img src="./../img/supplement/whey/w2.png" alt="supplement image" onclick="change('2')" />
           </div>
           <div class="img-item">
-            <img src="./../img/supplement/whey/w3.jpg" alt="supplement image" />
+            <img src="./../img/supplement/whey/w3.jpg" alt="supplement image" onclick="change('3')" />
           </div>
           <div class="img-item">
-            <img src="./../img/supplement/whey/w4.jpg" alt="supplement image" />
+            <img src="./../img/supplement/whey/w4.jpg" alt="supplement image" onclick="change('4')" />
           </div>
         </div>
       </div>
@@ -82,5 +82,30 @@
       </div>
     </div>
   </div>
+
+  <script>
+     function change(path)
+        {
+            imgElement = document.getElementById('product-main-image');
+            
+            if(path==1)
+            {
+                imgElement.src = "./../img/supplement/whey/w1.png";
+            }
+            else if(path==2)
+            {
+                imgElement.src = "./../img/supplement/whey/w2.png";
+            }
+            else if(path==3)
+            {
+                imgElement.src = "./../img/supplement/whey/w3.jpg";
+            }
+            else if(path==4)
+            {
+                imgElement.src = "./../img/supplement/whey/w4.jpg";
+            }
+        }
+
+  </script>
 </body>
 </html>
