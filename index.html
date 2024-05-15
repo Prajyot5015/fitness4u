@@ -10,6 +10,26 @@
 </head>
 
 <body>
+    <!--Header Section-->
+
+    <header class="header">
+        <a href="./index.html"> <i class="fa-solid fa-dumbbell"></i>Fitness<span>4</span>U </a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="menu-bar">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <i class="fa-solid fa-xmark" id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="./index.html" class="active">Home</a>
+            <a href="./pages/about.html">About Us</a>
+            <a href="./pages/supplement.html">Supplements</a>
+            <a href="./pages/contact.html">Contact</a>
+        </nav>
+        <i class="fa-regular fa-moon moon"></i>
+    </header>
+
+    <!--End Header Section-->
+
     <div class="back">
         <div class="overlay"> </div>
     </div>
@@ -64,11 +84,13 @@
                 <div class="teamDetails">
                     <div class="name">
                         <h4>Mayur Darandale</h4>
-                        <a href="https://www.facebook.com/mayur.darndale" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/mayur.darndale" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
                     </div>
                     <div class="pro">
                         <p>Trainer</p>
-                        <a href="https://www.instagram.com/md_mayur93?igsh=MWl6dDFpeDlldWxnMw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/md_mayur93?igsh=MWl6dDFpeDlldWxnMw==" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div class="description" id="desc1"></div>
                 </div>
@@ -76,16 +98,18 @@
 
             <div class="team1">
                 <div class="img">
-                    <img src="./img/trainer/rahul-about.jpg" alt="team1"  onclick="description('trainer2')">
+                    <img src="./img/trainer/rahul-about.jpg" alt="team1" onclick="description('trainer2')">
                 </div>
                 <div class="teamDetails">
                     <div class="name">
                         <h4>Rahul Haral</h4>
-                        <a href="https://www.facebook.com/rahul.haral.54" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/rahul.haral.54" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
                     </div>
                     <div class="pro">
                         <p>Trainer</p>
-                        <a href="https://www.instagram.com/haral.rahul?igsh=MWEzNTNudjl1YXlpdA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/haral.rahul?igsh=MWEzNTNudjl1YXlpdA==" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                     <div class="description" id="desc2"></div>
                 </div>
@@ -122,23 +146,20 @@
 
             const d = new Date();
             const day = weekday[d.getDay()];
-            
-            dayElement.innerText = `${day} : ${day=="Sunday" ? "Closed" : "Opened"}`
+
+            dayElement.innerText = `${day} : ${day == "Sunday" ? "Closed" : "Opened"}`
         }
         day();
 
-        function description(trainer)
-        {
+        function description(trainer) {
             const desc1 = document.getElementById('desc1');
             const desc2 = document.getElementById('desc2');
 
-            
-            if(trainer=="trainer1")
-            {
-                desc1.innerText = "20 Years Experiance";   
+
+            if (trainer == "trainer1") {
+                desc1.innerText = "20 Years Experiance";
             }
-            else
-            {
+            else {
                 desc2.innerText = "10 Years Experiance";
             }
 

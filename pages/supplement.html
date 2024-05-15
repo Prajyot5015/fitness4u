@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,76 +14,27 @@
 </head>
 
 <body>
-  <div class=" product-container" id="product-container">
-    <div class=" product-card">
-      <div class="product-imgs">
-        <div class="img-display">
-          <div class="img-showcase">
-            <img src="./../img/supplement/whey/w1.png" alt="supplement image" id="product-main-image" />
-          </div>
-        </div>
-        <div class="img-select" id="small-imgs">
-          <div class="img-item">
-            <img src="./../img/supplement/whey/w1.png" alt="supplement image" onclick="change('1','product1')" />
-          </div>
-          <div class="img-item">
-            <img src="./../img/supplement/whey/w2.png" alt="supplement image" onclick="change('2','product1')" />
-          </div>
-          <div class="img-item">
-            <img src="./../img/supplement/whey/w3.jpg" alt="supplement image" onclick="change('3','product1')" />
-          </div>
-          <div class="img-item">
-            <img src="./../img/supplement/whey/w4.jpg" alt="supplement image" onclick="change('4','product1')" />
-          </div>
-        </div>
-      </div>
+  <!--Header Section-->
 
-      <div class="product-content">
-        <h2 class="product-title" id="product-title"> Whey Protein Powder</h2>
-        <a href="#" class="product-link">visit our store</a>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-          <span>4.7</span>
-        </div>
+  <header class="header">
+    <a href="./index.html"> <i class="fa-solid fa-dumbbell"></i>Fitness<span>4</span>U </a>
+    <input type="checkbox" id="check" />
+    <label for="check" class="menu-bar">
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <i class="fa-solid fa-xmark" id="close-icon"></i>
+    </label>
+    <nav class="navbar">
+      <a href="./../index.html">Home</a>
+      <a href="./../pages/about.html">About Us</a>
+      <a href="./../pages/supplement.html" class="active">Supplements</a>
+      <a href="./../pages/contact.html">Contact</a>
+    </nav>
+    <i class="fa-regular fa-moon moon"></i>
+  </header>
 
-        <div class="product-price">
-          <p class="last-price">M.R.P.: <span id="mrp">₹ 3,699</span></p>
-          <p class="new-price">Price: <span>₹ <span id="price">2200 </span> </span></p>
-          <p class="new-price">Total: <span id="total-quantity"> 2200 (1) </span></p>
-        </div>
+  <!--End Header Section-->
 
-        <div class="product-detail">
-          <h2>about this item: </h2>
-          <p id="desc">[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for
-            building muscle.
-            <br />
-            [GREATER STRENGTH]: 3g of fast-absorbing creatine monohydrate for superior muscle gains and strength. <br />
-            [FASTER RECOVERY]: Rich in BCAAs and Glutamic acid which ensures faster muscle recovery and growth after an
-            intense workout. <br />
-            [BUILD IMMUNITY]: The antibodies that help fight diseases are actually made of protein and with a high
-            concentration of amino acids, it enhances the body's immunity. <br />
-          </p>
-          <ul>
-            <li>Brand: <span id="brand">Nutrabay</span></li>
-            <li>Flavour: <span id="flavour">Chocolate</span></li>
-            <li>Age Range: <span>Adult</span></li>
-            <li>Product Benefits : <span>Muscle Growth</span></li>
-          </ul>
-        </div>
-
-        <div class="purchase-info">
-          <img src="./../png/minus.png" class="quantity-img" onclick="decrement()" />
-          <span class="quantity-text" id="quantity-text">1</span>
-          <img src="./../png/plus.png" class="quantity-img" onclick="increment()" />
-          <button type="button" class="btn">Buy Now</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!--Supplements-->
 
   <div class="products">
     <h1>Our Products</h1>
@@ -125,13 +77,93 @@
     </div>
   </div>
 
+  <!--End Supplements-->
+
+  <!--Supplement Detail-->
+
+  <h1 class="supplement-heading">Supplement Details</h1>
+  <div class=" product-container" id="product-container">
+    <div class=" product-card">
+      <div class="product-imgs">
+        <div class="img-display">
+          <div class="img-showcase">
+            <img src="./../img/supplement/whey/w1.png" alt="supplement image" id="product-main-image" />
+          </div>
+        </div>
+        <div class="img-select" id="small-imgs">
+          <div class="img-item">
+            <img src="./../img/supplement/whey/w1.png" alt="supplement image" onclick="change('1','product1')" />
+          </div>
+          <div class="img-item">
+            <img src="./../img/supplement/whey/w2.png" alt="supplement image" onclick="change('2','product1')" />
+          </div>
+          <div class="img-item">
+            <img src="./../img/supplement/whey/w3.jpg" alt="supplement image" onclick="change('3','product1')" />
+          </div>
+          <div class="img-item">
+            <img src="./../img/supplement/whey/w4.jpg" alt="supplement image" onclick="change('4','product1')" />
+          </div>
+        </div>
+      </div>
+
+      <div class="product-content">
+        <h2 class="product-title" id="product-title"> Whey Protein Powder</h2>
+        <a href="#" class="product-link">visit our store</a>
+        <div class="product-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.7</span>
+        </div>
+
+       
+
+        <div class="product-detail">
+          <h2>about this item: </h2>
+          <p id="desc">[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for
+            building muscle.
+            <br />
+            [GREATER STRENGTH]: 3g of fast-absorbing creatine monohydrate for superior muscle gains and strength. <br />
+            [FASTER RECOVERY]: Rich in BCAAs and Glutamic acid which ensures faster muscle recovery and growth after an
+            intense workout. <br />
+            [BUILD IMMUNITY]: The antibodies that help fight diseases are actually made of protein and with a high
+            concentration of amino acids. <br />
+          </p>
+          <ul>
+            <li>Brand: <span id="brand">Nutrabay</span></li>
+            <li>Flavour: <span id="flavour">Chocolate</span></li>
+            <li>Age Range: <span>Adult</span></li>
+            <li>Product Benefits : <span>Muscle Growth</span></li>
+          </ul>
+        </div>
+
+         <div class="product-price">
+          <p class="last-price">M.R.P.: <span id="mrp">₹ 3,699</span></p>
+          <p class="new-price">Price: <span>₹ <span id="price">2200 </span> </span></p>
+          <p class="new-price">Total: <span id="total-quantity"> 2200 (1) </span></p>
+        </div>
+
+        <div class="purchase-info">
+          <img src="./../png/minus.png" class="quantity-img" onclick="decrement()" />
+          <span class="quantity-text" id="quantity-text">1</span>
+          <img src="./../png/plus.png" class="quantity-img" onclick="increment()" />
+          <button type="button" class="btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--End Supplement Detail-->
+
   <script>
     const data = {
       "product1": {
         "name": " Whey Protein Powder",
         "MRP": "3,699",
         "price": "2200",
-        "desc": "[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for building muscle.[GREATER STRENGTH]: 3g of fast-absorbing creatine monohydrate for superior muscle gains and strength.[FASTER RECOVERY]: Rich in BCAAs and Glutamic acid which ensures faster muscle recovery and growth after an intense workout.[BUILD IMMUNITY]: The antibodies that help fight diseases are actually made of protein and with a high concentration of amino acids, it enhances the body's immunity.",
+        "desc": "[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for building muscle.[GREATER STRENGTH]: 3g of fast-absorbing creatine monohydrate for superior muscle gains and strength.[FASTER RECOVERY]: Rich in BCAAs and Glutamic acid which ensures faster muscle recovery and growth after an intense workout.[BUILD IMMUNITY]: The antibodies that help fight diseases are actually made of protein and with a high concentration of amino acids.",
         "brand": "Nutrabay",
         "flavour": "chocolate",
         "img": ["./../img/supplement/whey/w1.png", "./../img/supplement/whey/w2.png", "./../img/supplement/whey/w3.jpg",
@@ -184,8 +216,7 @@
       const quantityText = document.getElementById('quantity-text');
       const mrp = document.getElementById('mrp');
 
-      if(product == "product1")
-      {
+      if (product == "product1") {
         bigImg.src = `${data.product1.img[0]}`;
         smallImg.innerHTML = "";
 
@@ -357,5 +388,7 @@
     }
 
   </script>
+  <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
