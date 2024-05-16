@@ -52,7 +52,8 @@ body {
     padding: 3px 20px;
     transition: all 0.3s ease;
 }
-.active{
+
+.active {
     border: 1px solid #212529;
     border-radius: 5px;
 }
@@ -394,6 +395,135 @@ a {
     font-size: 15px;
     text-transform: uppercase;
 }
+
+li {
+    list-style: none;
+}
+
+/*Start Footer */
+
+footer {
+    background: #343434;
+    padding-top: 50px;
+    margin-top: 30px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-content h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f18930;
+    text-align: center;
+}
+
+.footer-content p {
+    width: 200px;
+    margin: auto;
+    padding: 7px;
+}
+.contact{
+    display: flex;
+    align-items: center;
+}
+.contact i {
+    padding-right: 10px;
+}
+
+.contact span {
+    margin-left: 30px;
+}
+
+.footer-content ul {
+    text-align: center;
+}
+
+.footer-content .list {
+    padding: 0;
+}
+
+.footer-content .list li {
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-content a:hover {
+    color: #f18930;
+}
+
+.social-media {
+    margin-top: 40px;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-media ul li a {
+    font-size: 15px;
+    padding: 8px;
+    margin-right: 20px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.social-media ul li a:hover {
+    background-color: #fff;
+    color: #000;
+
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+    background-color: rgb(66, 66, 66);
+}
+
+.footer-bottom p {
+    color: #fff;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+
+.footer-bottom .fa-heart {
+    color: red;
+    font-size: 20px;
+}
+
+@media (max-width: 540px) {
+    .footer-container {
+        display: grid;
+        margin: auto;
+    }
+
+    .footer-content h3 {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+}
+
+/* End Footer */
 
 /* Media Query */
 

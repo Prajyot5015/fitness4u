@@ -10,9 +10,9 @@
 </head>
 
 <body>
-     <!--Header Section-->
+    <!--Header Section-->
 
-     <header class="header">
+    <header class="header">
         <a href="./index.html"> <i class="fa-solid fa-dumbbell"></i>Fitness<span>4</span>U </a>
         <input type="checkbox" id="check" />
         <label for="check" class="menu-bar">
@@ -101,39 +101,92 @@
             <button type="button" id="prices" onclick="prices()">Prices </button>
             <button type="button" id="videos" onclick="videos()">Videos</button>
         </div>
-        <div class="img-container" id="img"> 
-           <div class="imgs">
-                <img src="./../img/gym/g6.jpg" alt="image not found" />                
-            </div>
-            
+        <div class="img-container" id="img">
             <div class="imgs">
-                <img src="./../img/back.jpg" alt="image not found" />                
+                <img src="./../img/gym/g6.jpg" alt="image not found" />
             </div>
 
             <div class="imgs">
-                <img src= "./../img/trainer/rahul-1.jpg" alt="image not found" />                
+                <img src="./../img/back.jpg" alt="image not found" />
             </div>
 
             <div class="imgs">
-                <img src="./../img/body-show/b5.jpg" alt="image not found" />                
+                <img src="./../img/trainer/rahul-1.jpg" alt="image not found" />
             </div>
 
             <div class="imgs">
-                <img src="./../img/trainer/tr1.jpg" alt="image not found" />                
+                <img src="./../img/body-show/b5.jpg" alt="image not found" />
             </div>
 
             <div class="imgs">
-                <img src= "./../img/body-show/b2.jpg" alt="image not found" />                
-            </div> 
-
-            <div class="imgs">
-                <img src="./../img/body-show/b6.jpg" alt="image not found" />                
+                <img src="./../img/trainer/tr1.jpg" alt="image not found" />
             </div>
 
             <div class="imgs">
-                <img src= "./../img/price/award.jpg" alt="image not found" />                
-            </div> 
+                <img src="./../img/body-show/b2.jpg" alt="image not found" />
+            </div>
+
+            <div class="imgs">
+                <img src="./../img/body-show/b6.jpg" alt="image not found" />
+            </div>
+
+            <div class="imgs">
+                <img src="./../img/price/award.jpg" alt="image not found" />
+            </div>
         </div>
+    </div>
+
+    <!--Start Footer -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <div class="contact">
+                    <i class="far fa-envelope"></i>
+                    <p><a href="mailto:fitness4u@gmail.com">fitness4u@gmail.com</a></p>
+                </div>
+                <div class="contact">
+                    <i class="fas fa-phone-volume"></i><a href="tel:09960014512">
+                        <p> 09960014512
+                    </a></p>
+                </div>
+                <div class="contact">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><a href="https://maps.app.goo.gl/ZCaLBy9iwxGCiZHYA" target="blank">
+                            Nagar Manmad Road, MH SH 10, near Bus Stand,Babhaleshwar,Maharashtra 413737 </a>
+                </div>
+                </p>
+            </div>
+
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="./../index.html">Home</a></li>
+                    <li><a href="./../pages/about.html">About Us</a></li>
+                    <li><a href="./../pages/supplement.html">Supplements</a></li>
+                    <li><a href="./../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <div class="social-media">
+                    <ul>
+                        <li><a href="https://www.facebook.com/mayur.darndale" target="_blank"><i
+                                    class="fa-brands fa-facebook-f"></i></a> </li>
+                        <li><a href="https://www.instagram.com/md_mayur93?igsh=MWl6dDFpeDlldWxnMw==" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made With Love <i class="fas fa-heart"></i> By Fitness<span class="four">4</span>U</p>
+        </div>
+    </footer>
+
+    <!--End Footer-->
 
     <script>
         function description(trainer) {
@@ -171,11 +224,10 @@
                 imgElement.src = "./../img/gym/g2.jpg";
             }
         }
-        
-        function showAll()
-        {
-            const imgs = ["./../img/gym/g6.jpg" , "./../img/back.jpg" , "./../img/trainer/rahul-1.jpg" ,
-                            "./../img/body-show/b5.jpg", "./../img/trainer/tr1.jpg" , "./../img/body-show/b2.jpg" , "./../img/body-show/b6.jpg" , "./../img/price/award.jpg" ] ;
+
+        function showAll() {
+            const imgs = ["./../img/gym/g6.jpg", "./../img/back.jpg", "./../img/trainer/rahul-1.jpg",
+                "./../img/body-show/b5.jpg", "./../img/trainer/tr1.jpg", "./../img/body-show/b2.jpg", "./../img/body-show/b6.jpg", "./../img/price/award.jpg"];
 
             const imgElement = document.getElementById('img');
             document.getElementById('showAll').classList.add("active");
@@ -185,17 +237,15 @@
 
             imgElement.innerHTML = " ";
 
-            for(let i = 0; i < imgs.length; i++)
-            {
+            for (let i = 0; i < imgs.length; i++) {
                 imgElement.innerHTML = imgElement.innerHTML + ` <div class="imgs">
-                <img src=" ${imgs[i]}" alt="image not found" />    </div>`;        
+                <img src=" ${imgs[i]}" alt="image not found" />    </div>`;
             }
         }
 
-        function bodyShow()
-        {
-            const imgs = ["./../img/body-show/b1.jpg" , "./../img/body-show/b2.jpg" , "./../img/body-show/b3.jpg" ,
-                            "./../img/body-show/b5.jpg" , "./../img/price/b7.jpg" , "./../img/price/price.jpg" , "./../img/body-show/b6.jpg" , "./../img/body-show/event.jpg" ] ;
+        function bodyShow() {
+            const imgs = ["./../img/body-show/b1.jpg", "./../img/body-show/b2.jpg", "./../img/body-show/b3.jpg",
+                "./../img/body-show/b5.jpg", "./../img/price/b7.jpg", "./../img/price/price.jpg", "./../img/body-show/b6.jpg", "./../img/body-show/event.jpg"];
 
             const imgElement = document.getElementById('img');
             document.getElementById('showAll').classList.remove("active");
@@ -204,58 +254,53 @@
             document.getElementById('videos').classList.remove("active");
 
             imgElement.innerHTML = " ";
-            for(let i = 0; i < imgs.length; i++)
-            {
+            for (let i = 0; i < imgs.length; i++) {
                 imgElement.innerHTML = imgElement.innerHTML + ` <div class="imgs">
                 <img src=" ${imgs[i]}" alt="image not found" />   </div>`;
             }
         }
 
-        function prices()
-        {
-            const imgs = ["./../img/price/award.jpg" , "./../img/price/b4.jpg" , "./../img/price/b7.jpg" ,
-                            "./../img/body-show/b3.jpg" , "./../img/body-show/b2.jpg" , "./../img/body-show/b6.jpg",
-                             "./../img/price/trainer.jpg" , "./../img/price/price2.jpg" ] ;
+        function prices() {
+            const imgs = ["./../img/price/award.jpg", "./../img/price/b4.jpg", "./../img/price/b7.jpg",
+                "./../img/body-show/b3.jpg", "./../img/body-show/b2.jpg", "./../img/body-show/b6.jpg",
+                "./../img/price/trainer.jpg", "./../img/price/price2.jpg"];
 
             const imgElement = document.getElementById('img');
             document.getElementById('showAll').classList.remove("active");
             document.getElementById('bodyShow').classList.remove("active");
             document.getElementById('prices').classList.add("active");
             document.getElementById('videos').classList.remove("active");
-            
+
             imgElement.innerHTML = " ";
 
-            for(let i = 0; i < imgs.length; i++)
-            {
+            for (let i = 0; i < imgs.length; i++) {
                 imgElement.innerHTML = imgElement.innerHTML + ` <div class="imgs">
-                <img src=" ${imgs[i]}" alt="image not found" />    </div>`;        
+                <img src=" ${imgs[i]}" alt="image not found" />    </div>`;
             }
         }
 
-        function videos()
-        {
-            const imgs = ["./../video/group.mp4" , "./../video/mainTrainer.mp4" , "./../video/train.mp4" ,"./../video/workout.mp4"] ;
+        function videos() {
+            const imgs = ["./../video/group.mp4", "./../video/mainTrainer.mp4", "./../video/train.mp4", "./../video/workout.mp4"];
 
             const imgElement = document.getElementById('img');
             document.getElementById('showAll').classList.remove("active");
             document.getElementById('bodyShow').classList.remove("active");
             document.getElementById('prices').classList.remove("active");
             document.getElementById('videos').classList.add("active");
-            
-            
+
+
             imgElement.innerHTML = " ";
 
-            for(let i = 0; i < imgs.length; i++)
-            {
+            for (let i = 0; i < imgs.length; i++) {
                 imgElement.innerHTML = imgElement.innerHTML + ` <div class="imgs">
                     <video height="300px" width="300px" controls autoplay muted>
                     <source src="${imgs[i]}" type="video/mp4" />
-                  </video>  </div>`;        
+                  </video>  </div>`;
             }
         }
-       
 
-       
+
+
     </script>
     <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
