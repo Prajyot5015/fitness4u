@@ -82,13 +82,15 @@
      font-size: 16px;
      font-weight: bolder;
  }
- .focus h1{
-    text-align: center;
+
+ .focus h1 {
+     text-align: center;
  }
- .focus-card{
-    width: 80%;
-    display: block;
-    margin: 50px auto;
+
+ .focus-card {
+     width: 80%;
+     display: block;
+     margin: 50px auto;
  }
 
  .focus-card .card {
@@ -111,45 +113,73 @@
      text-align: center;
      padding: 5px;
  }
- .carbs-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+ .carbs-container {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
  }
- .carbs{
-    margin-top: 15px;   
+
+ .carbs {
+     margin-top: 15px;
+     padding: 10px;
  }
- .carbs img{
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 5px auto;
+
+ .carbs img {
+     width: 150px;
+     height: 150px;
+     display: block;
+     margin: 5px auto;
  }
- .carbs h3{
-    font-size: 30px;
-    font-weight: 800;
-    text-align: center;
+
+ .carbs h3 {
+     font-size: 30px;
+     font-weight: 800;
+     text-align: center;
  }
- .carbs h4{
-    font-weight: 800;
+
+ .carbs h4 {
+     font-weight: 800;
  }
- .pre-workout p{
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
+
+ .pre-workout p {
+     font-size: 20px;
+     font-weight: bold;
+     text-align: center;
  }
- .pre-workout img{
-    width: 100%;
-    margin-bottom: 30px;
+
+ .pre-workout img {
+     width: 100%;
+     margin-bottom: 30px;
  }
- .pre-workout span{
-    font-size: 25px;
+
+ .pre-workout span {
+     font-size: 25px;
  }
- .pre-workout ul{
-    font-size: 24px;
-    font-weight: bold;
+
+ .pre-workout ul {
+     font-size: 24px;
+     font-weight: bold;
  }
- .pre-workout ul li{
-    padding: 7px;
+
+ .pre-workout ul li {
+     padding: 7px;
  }
- 
+
+
+ @media screen and (max-width: 1042px) {
+     .carbs-container {
+         flex-direction: column;
+     }
+     .focus-card .card h2 {
+       width: 150px;
+       font-size: 20px;
+    }
+ }
+
+ @media screen and (max-width: 496px){
+    .focus-card .card h2 {
+        left: 20%;
+        top: -20px;
+    }
+ }
