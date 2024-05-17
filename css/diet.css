@@ -234,20 +234,19 @@
      padding: 20px;
  }
 
- table {
+ .table-container table {
      width: 90%;
      margin: 10px auto;
      text-align: center;
      background: #424242;
  }
 
- th {
+ .table-container th {
      color: #FF4545;
      font-size: 30px;
  }
 
- th,
- td {
+ .table-container th, .table-container td {
      padding: 20px;
      border-radius: 10px;
  }
@@ -261,19 +260,84 @@
          padding: 20px;
      }
 
-     table {
+     .table-container table {
          width: 90%;
          margin: 10px auto;
          text-align: center;
          background: #424242;
      }
 
-     th {
+     .table-container th {
          font-size: 20px;
      }
 
-     th,
-     td {
+     .table-container th,
+     .table-container td {
          padding: 2px;
      }
  }
+
+ .meal-plan-container{
+    width: 90%;
+    background: #424242;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+ }
+ .meal-plan-container h2{
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    color: #FF4545;
+ }
+ .meal-plan-container p{
+    padding: 10px 50px;
+    font-size: 20px;
+ }
+ .meal-plan-container table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+ }
+ .meal-plan-container td,
+ .meal-plan-container th{
+    padding: 10px;
+ }
+
+ 
+ .calories-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.calories-card .card {
+    width: 250px;    
+    border: none;
+    background: #424242;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    margin: 10px;
+}
+.calories-card .card h4{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background: #FF4545;
+    border-radius: 5px;
+    padding: 0;
+}
+.calories-card .card p{
+    text-align: center;
+    font-weight: bolder;
+    padding: 10px;
+}
+.calories-card .card ul{
+    list-style: none;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.calories-card .card ul li{
+    padding: 10px;
+}

@@ -87,7 +87,7 @@
     </div>
 
     <div class="focus">
-        <h1>What to eat before & after workouts to boil muscle</h1>
+        <h1>What to eat before & after workouts to build muscle</h1>
         <div class="focus-card">
             <div class="card">
                 <h2>Focus on:</h2>
@@ -225,9 +225,92 @@
         </div>
     </div>
 
-     <!--Start Footer -->
+    <div class="meal-plan-container">
+        <h2>2400-Calorie Meal Plan For Building Muscle</h2>
+        <p>This Plan includes three balanced meals and two snacks daily,providing the perfect mix of 200 grams of
+            protein,243 grams of carbohydrates, and 70g of dietary fats.</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Macros</th>
+                    <th>Grams</th>
+                    <th>Calories</th>
+                    <th>% of 2400</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Protein</td>
+                    <td>200 g</td>
+                    <td>880</td>
+                    <td>33.3%</td>
+                </tr>
 
-     <footer>
+                <tr>
+                    <td>Carbs</td>
+                    <td>243 g</td>
+                    <td>972</td>
+                    <td>40.5%</td>
+                </tr>
+
+                <tr>
+                    <td>Facts</td>
+                    <td>70 g</td>
+                    <td>630</td>
+                    <td>26.3%</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="calories-card">
+            <div class="card">
+                <h4 >BreakFast</h4>
+                <p>Chia Seed Mango Pudding</p>
+                <ul>
+                    <li>Chia Seeds</li>
+                    <li>Protein Powder</li>
+                    <li>Frozen Mango</li>
+                    <li>Milk</li>
+                    <li>Greek yogurt</li>
+                    <li>Honey</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4 >Lunch</h4>
+                <p>Protein Pasta Salad</p>
+                <ul>
+                    <li>Cucumbers</li>
+                    <li>Cherry Tomato</li>
+                    <li>Red Onion</li>
+                    <li>Black Beans</li>
+                    <li>Whole Grain Pasta</li>
+                    <li>Shrimp</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4 >Dinner</h4>
+                <p>Lemon Pepper Tilapia</p>
+                <ul>
+                    <li>Tuna salad</li>
+                    <li>Baby carrots</li>
+                    <li>Cucumber</li>
+                    <li>Celery</li>
+                    <li>Wheat crackers</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4 >Snack</h4>
+                <p>Almonds and a Hard Boiled Egg</p>
+                <ul>
+                    <li>Almonds</li>
+                    <li>Egg</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Start Footer -->
+
+    <footer>
         <div class="footer-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
@@ -277,7 +360,7 @@
     </footer>
 
     <!--End Footer-->
-    
+
     <script>
         const data = {
             "muscleGain": {
@@ -316,8 +399,7 @@
         function muscleGain(receive) {
             const muscleGainElement = document.getElementById('table-content');
 
-            if(receive == 'gain')
-            {
+            if (receive == 'gain') {
                 muscleGainElement.innerHTML = `  <p>One day Plan For Muscle Gain</p>
                 <table border="1">
                 <thead>
@@ -381,8 +463,7 @@
                 </tbody>
             </table > `
             }
-            else if(receive == 'loss')
-            {
+            else if (receive == 'loss') {
                 muscleGainElement.innerHTML = `  <p>One day Plan For Weight Loss</p>
                 <table border="1">
                 <thead>
