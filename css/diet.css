@@ -204,3 +204,38 @@
         font-size: 15px;
     }
  }
+
+.one-day-container h2{
+    text-align: center;
+}
+.gain-loss-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.gain-loss-container .btn{
+    font-weight: 700;
+    margin: 0 10px;
+}
+
+.table-container p{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    padding: 20px;
+}
+table{
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    background: #424242;
+}
+th{
+    color: #FF4545;
+    font-size: 30px;
+}
+th,td{
+    padding: 20px;
+    border-radius: 10px;
+}

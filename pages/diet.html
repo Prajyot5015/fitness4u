@@ -11,9 +11,9 @@
 
 <body>
 
-     <!--Header Section-->
+    <!--Header Section-->
 
-     <header class="header">
+    <header class="header">
         <a href="./index.html"> <i class="fa-solid fa-dumbbell"></i>Fitness<span>4</span>U </a>
         <input type="checkbox" id="check" />
         <label for="check" class="menu-bar">
@@ -141,7 +141,8 @@
                     <div class="carbs pre-workout">
                         <span>2:1 ratio of carbs:protein</span>
                         <ul>
-                            <li><i class="fa-solid fa-arrow-right"></i> Protein shake (protein powder + fruit + greens)</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Protein shake (protein powder + fruit + greens)
+                            </li>
                             <li><i class="fa-solid fa-arrow-right"></i> Brown rice + beef + veggies</li>
                             <li><i class="fa-solid fa-arrow-right"></i> Sweet potato + chicken</li>
                         </ul>
@@ -151,6 +152,116 @@
         </div>
     </div>
 
+    <div class="one-day-container">
+        <h2>One Day Diet Plan</h2>
+        <div class="gain-loss-container">
+            <button type="button" class="btn" onclick="muscleGain()">For Muscle Gain</button>
+            <button type="button" class="btn" onclick="muscleGain()">For Weight Loss</button>
+        </div>
+
+        <div class="table-container" id="table-content">
+            <p>One day Plan For Weight Loss</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Time</th>
+                        <th>Product</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Wake Up</td>
+                        <td>6 AM - 7 AM</td>
+                        <td>Warm Water or Green Tea</td>
+                        <td>Early in morning when you wake up <br /> drink warm water or green tea</td>
+                    </tr>
+
+                    <tr>
+                        <td>BreakFast</td>
+                        <td>7 AM - 8 AM</td>
+                        <td>Oats and milk</td>
+                        <td>Oats Meals with warm milk 1 bowl 40gm</td>
+                    </tr>
+                    <tr>
+                        <td>Snack</td>
+                        <td>11 AM - 12 PM</td>
+                        <td>Fruit</td>
+                        <td>Apple & orange or any seasonal fruits</td>
+                    </tr>
+
+                    <tr>
+                        <td>Launch</td>
+                        <td>1 PM - 2 PM</td>
+                        <td>Food</td>
+                        <td>Dal(1 bowl) + 2 Roti with salad & 4 eggs or paneer 100gm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Snack</td>
+                        <td>4 PM - 5 PM</td>
+                        <td>Coffee</td>
+                        <td>Coffe with less sugar or green tea</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dinner</td>
+                        <td>8 PM - 9 PM</td>
+                        <td>Food</td>
+                        <td>Veggle(Sabzi) + 2 Roti with salad & chicken or paneer(100gm)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sleep</td>
+                        <td>10 PM - 11 PM</td>
+                        <td>--</td>
+                        <td>Sleep at least 6 to 8 hours daily</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const data = {
+            "muscleGain": {
+                "wakeup": ["Wake Up", "6 AM - 7 AM", "Warm Water", "Early in morning when you wake up <br /> drink warm water (Empty Stamach)"],
+
+                "BreakFast": ["BreakFast", "7 AM - 8 AM", "Oats and milk", "Oats Meal 40gm to 50gm"],
+
+                "Launch": ["Launch", "12 PM - 1 PM ", " Food", " Dal(1 bowl) + Roti/Rice with salad & 2 eggs or paneer 100gm "],
+
+                "Snack": ["Snack", "3 PM - 4 PM", "Fruits ", " Banana or any seasonal fruits "], 
+
+                "WorkOut": ["WorkOut", "6 PM - 7 PM", " Protein Shake ", " (Follow our week workout plan) + Protein Shake(Optional)"],
+
+                "Dinner": ["Dinner", "9 PM - 10 PM", " Food ", " Veggle(Sabzi) + 2 Roti with eggs/chicken/paneer(50-100gm)"],
+
+                "Sleep": ["Sleep", "10 PM - 11 PM", " -- ", " Sleep at least 6 to 8 hours daily "]
+            },
+
+            "weightLoss": {
+                "wakeup": ["Wake Up", "6 AM - 7 AM", "Warm Water or Green Tea", "Early in morning when you wake up <br /> drink warm water or green tea"],
+
+                "BreakFast": ["BreakFast", "7 AM - 8 AM", "Oats and milk", "Oats Meals with warm milk 1 bowl 40gm"],
+
+                "Snack": ["Snack", "11 AM - 12 PM", "Fruit", "Apple & orange or any seasonal fruits"],
+
+                "Launch": ["Launch", "1 PM - 2 PM ", " Food ", " Dal(1 bowl) + 2 Roti with salad & 4 eggs or paneer 100gm "],
+
+                "Snack": ["Snack", "4 PM - 5 PM", " Coffee ", " Coffe with less sugar or green tea "],
+
+                "Dinner": ["Dinner", "8 PM - 9 PM", " Food ", " Veggle(Sabzi) + 2 Roti with salad & chicken or paneer(100gm)"],
+
+                "Sleep": ["Sleep", "10 PM - 11 PM", " -- ", " Sleep at least 6 to 8 hours daily "]
+            }
+
+        }
+       
+    </script>
     <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
 
