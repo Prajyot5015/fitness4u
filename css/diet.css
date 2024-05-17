@@ -1,0 +1,155 @@
+ /* black = #0000000
+           2 gray = #212121
+            3 #303030
+            4 #424242 */
+
+ body {
+     background-color: #171819;
+     color: #fff;
+ }
+
+ .protein-container h1 {
+     text-align: center;
+ }
+
+ .protein-card {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ .protein-card .card {
+     width: 400px;
+     height: 210px;
+     border: none;
+     background: #424242;
+     border-radius: 10px;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+     text-align: center;
+     margin: 10px;
+ }
+
+ .protein-card .card h2 {
+     font-size: 20px;
+     font-weight: bolder;
+     text-transform: uppercase;
+ }
+
+ .protein-card .card .inner {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 30px;
+ }
+
+ .protein-card .card .inner .fa-plus {
+     color: #FF4545;
+ }
+
+ .formula {
+     background-color: #FF4545;
+     width: 120px;
+     padding: 5px;
+     font-size: 20px;
+     font-weight: 800;
+     display: block;
+     margin: 0 auto;
+     border: none;
+     border-radius: 50px;
+ }
+
+ .protein-card .card2 p {
+     font-size: 20px;
+     font-weight: 600;
+ }
+
+ .protein-foods {
+     margin-top: 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+ }
+
+ .protein-foods img {
+     width: 40px;
+     height: 40px;
+     margin-right: 10px;
+ }
+
+ .food {
+     display: flex;
+     align-items: center;
+     font-size: 16px;
+     font-weight: bolder;
+ }
+ .focus h1{
+    text-align: center;
+ }
+ .focus-card{
+    width: 80%;
+    display: block;
+    margin: 50px auto;
+ }
+
+ .focus-card .card {
+     border: none;
+     background: #424242;
+     border-radius: 10px;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+     margin: 10px;
+     position: relative;
+ }
+
+ .focus-card .card h2 {
+     background: #FF4545;
+     width: 200px;
+     border-radius: 5px;
+     position: absolute;
+     left: 40%;
+     top: -20px;
+     margin: 0 auto;
+     text-align: center;
+     padding: 5px;
+ }
+ .carbs-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .carbs{
+    margin-top: 15px;   
+ }
+ .carbs img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 5px auto;
+ }
+ .carbs h3{
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+ }
+ .carbs h4{
+    font-weight: 800;
+ }
+ .pre-workout p{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+ }
+ .pre-workout img{
+    width: 100%;
+    margin-bottom: 30px;
+ }
+ .pre-workout span{
+    font-size: 25px;
+ }
+ .pre-workout ul{
+    font-size: 24px;
+    font-weight: bold;
+ }
+ .pre-workout ul li{
+    padding: 7px;
+ }
+ 
