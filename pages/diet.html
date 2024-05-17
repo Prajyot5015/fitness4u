@@ -6,9 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness4U</title>
     <link rel="stylesheet" href="./../css/diet.css" />
+    <link rel="stylesheet" href="./../css/style.css" />
 </head>
 
 <body>
+
+     <!--Header Section-->
+
+     <header class="header">
+        <a href="./index.html"> <i class="fa-solid fa-dumbbell"></i>Fitness<span>4</span>U </a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="menu-bar">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <i class="fa-solid fa-xmark" id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="./../index.html">Home</a>
+            <a href="./../pages/about.html" class="active">About Us</a>
+            <a href="./../pages/supplement.html">Supplements</a>
+            <a href="./../pages/diet.html">Diet Plan</a>
+            <a href="./../pages/contact.html">Contact</a>
+        </nav>
+        <i class="fa-regular fa-moon moon"></i>
+    </header>
+
+    <!--End Header Section-->
+
     <div class="protein-container">
         <h1>How Much Protein Do You Need TO Build Muscle?</h1>
         <div class="protein-card">
@@ -22,7 +45,7 @@
             </div>
             <div class="card card2">
                 <h2>What is enough protein?</h2>
-                <p class="formula">0.8 - 2.0 g/kg</p>
+                <span class="formula">0.8 - 2.0 g/kg</span>
                 <p>Weight(lbs) / 2.2 = Weight(kg)</p>
                 <p>Weight(kg) x 0.8 = Protein</p>
             </div>
@@ -67,16 +90,16 @@
         <h1>What to eat before & after workouts to boil muscle</h1>
         <div class="focus-card">
             <div class="card">
-                <h2>focus on:</h2>
+                <h2>Focus on:</h2>
                 <div class="carbs-container">
-                    <div class="carbs">
+                    <div class="carbs one-carb">
                         <img src="./../png/proteins/carb.png" alt="carbs" />
                         <h3>Carbs</h3>
                         <p>Provide fuel muscles need to perform and recover</p>
                         <h4>choose whole, complex carbs</h4>
                         <p>whole grains, vegetables,legumes</p>
                     </div>
-                    <div class="carbs">
+                    <div class="carbs one-carb">
                         <img src="./../png/proteins/egg-big.png" alt="carbs" />
                         <h3>Protein</h3>
                         <p>Provides amino acids needed for muscle-building</p>

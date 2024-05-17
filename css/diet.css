@@ -7,9 +7,13 @@
      background-color: #171819;
      color: #fff;
  }
+ .protein-container{
+    margin-top: 70px;
+ }
 
  .protein-container h1 {
      text-align: center;
+     padding: 20px;
  }
 
  .protein-card {
@@ -32,6 +36,7 @@
  .protein-card .card h2 {
      font-size: 20px;
      font-weight: bolder;
+     padding-top: 20px;
      text-transform: uppercase;
  }
 
@@ -40,6 +45,7 @@
      justify-content: center;
      align-items: center;
      font-size: 30px;
+     padding-top: 30px;
  }
 
  .protein-card .card .inner .fa-plus {
@@ -48,12 +54,12 @@
 
  .formula {
      background-color: #FF4545;
-     width: 120px;
+     width: 150px;
      padding: 5px;
      font-size: 20px;
      font-weight: 800;
      display: block;
-     margin: 0 auto;
+     margin: 10px auto;
      border: none;
      border-radius: 50px;
  }
@@ -61,10 +67,11 @@
  .protein-card .card2 p {
      font-size: 20px;
      font-weight: 600;
+     padding: 10px 20px; 
  }
 
  .protein-foods {
-     margin-top: 0;
+     margin-top: 10px;
      display: flex;
      align-items: center;
      justify-content: space-around;
@@ -85,6 +92,7 @@
 
  .focus h1 {
      text-align: center;
+     padding: 20px;
  }
 
  .focus-card {
@@ -103,6 +111,7 @@
  }
 
  .focus-card .card h2 {
+    font-size: 20px;
      background: #FF4545;
      width: 200px;
      border-radius: 5px;
@@ -136,10 +145,15 @@
      font-size: 30px;
      font-weight: 800;
      text-align: center;
+     padding: 20px;
  }
-
+.one-carb p{
+    text-align: center;
+}
  .carbs h4 {
      font-weight: 800;
+     padding: 10px;
+     text-align: center;
  }
 
  .pre-workout p {
@@ -154,11 +168,11 @@
  }
 
  .pre-workout span {
-     font-size: 25px;
+     font-size: 20px;
  }
 
  .pre-workout ul {
-     font-size: 24px;
+     font-size: 20px;
      font-weight: bold;
  }
 
