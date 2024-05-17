@@ -371,7 +371,7 @@ a {
 .processes .card {
     width: 200px;
     height: 180px;
-    border: 2px solid #666262;
+    background: #424242;
     border-radius: 5px;
     text-align: center;
     margin: 10px;
