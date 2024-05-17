@@ -155,8 +155,8 @@
     <div class="one-day-container">
         <h2>One Day Diet Plan</h2>
         <div class="gain-loss-container">
-            <button type="button" class="btn" onclick="muscleGain()">For Muscle Gain</button>
-            <button type="button" class="btn" onclick="muscleGain()">For Weight Loss</button>
+            <button type="button" class="btn" onclick="muscleGain('gain')">For Muscle Gain</button>
+            <button type="button" class="btn" onclick="muscleGain('loss')">For Weight Loss</button>
         </div>
 
         <div class="table-container" id="table-content">
@@ -234,7 +234,7 @@
 
                 "Launch": ["Launch", "12 PM - 1 PM ", " Food", " Dal(1 bowl) + Roti/Rice with salad & 2 eggs or paneer 100gm "],
 
-                "Snack": ["Snack", "3 PM - 4 PM", "Fruits ", " Banana or any seasonal fruits "], 
+                "Snack": ["Snack", "3 PM - 4 PM", "Fruits ", " Banana or any seasonal fruits "],
 
                 "WorkOut": ["WorkOut", "6 PM - 7 PM", " Protein Shake ", " (Follow our week workout plan) + Protein Shake(Optional)"],
 
@@ -248,7 +248,7 @@
 
                 "BreakFast": ["BreakFast", "7 AM - 8 AM", "Oats and milk", "Oats Meals with warm milk 1 bowl 40gm"],
 
-                "Snack": ["Snack", "11 AM - 12 PM", "Fruit", "Apple & orange or any seasonal fruits"],
+                "Snack1": ["Snack", "11 AM - 12 PM", "Fruit", "Apple & orange or any seasonal fruits"],
 
                 "Launch": ["Launch", "1 PM - 2 PM ", " Food ", " Dal(1 bowl) + 2 Roti with salad & 4 eggs or paneer 100gm "],
 
@@ -260,7 +260,141 @@
             }
 
         }
-       
+        function muscleGain(receive) {
+            const muscleGainElement = document.getElementById('table-content');
+
+            if(receive == 'gain')
+            {
+                muscleGainElement.innerHTML = `  <p>One day Plan For Muscle Gain</p>
+                <table border="1">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Time</th>
+                        <th>Product</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>${data.muscleGain.wakeup[0]}</td>
+                        <td>${data.muscleGain.wakeup[1]}</td>
+                        <td>${data.muscleGain.wakeup[2]}</td>
+                        <td>${data.muscleGain.wakeup[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.muscleGain.BreakFast[0]}</td>
+                        <td>${data.muscleGain.BreakFast[1]}</td>
+                        <td>${data.muscleGain.BreakFast[2]}</td>
+                        <td>${data.muscleGain.BreakFast[3]}</td>
+                    </tr>
+                    <tr>
+                        <td>${data.muscleGain.Launch[0]}</td>
+                        <td>${data.muscleGain.Launch[1]}</td>
+                        <td>${data.muscleGain.Launch[2]}</td>
+                        <td>${data.muscleGain.Launch[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.muscleGain.Snack[0]}</td>
+                        <td>${data.muscleGain.Snack[1]}</td>
+                        <td>${data.muscleGain.Snack[2]}</td>
+                        <td>${data.muscleGain.Snack[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.muscleGain.WorkOut[0]}</td>
+                        <td>${data.muscleGain.WorkOut[1]}</td>
+                        <td>${data.muscleGain.WorkOut[2]}</td>
+                        <td>${data.muscleGain.WorkOut[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.muscleGain.Dinner[0]}</td>
+                        <td>${data.muscleGain.Dinner[1]}</td>
+                        <td>${data.muscleGain.Dinner[2]}</td>
+                        <td>${data.muscleGain.Dinner[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.muscleGain.Sleep[0]}</td>
+                        <td>${data.muscleGain.Sleep[1]}</td>
+                        <td>${data.muscleGain.Sleep[2]}</td>
+                        <td>${data.muscleGain.Sleep[3]}</td>
+                    </tr>
+
+                </tbody>
+            </table > `
+            }
+            else if(receive == 'loss')
+            {
+                muscleGainElement.innerHTML = `  <p>One day Plan For Weight Loss</p>
+                <table border="1">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Time</th>
+                        <th>Product</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>${data.weightLoss.wakeup[0]}</td>
+                        <td>${data.weightLoss.wakeup[1]}</td>
+                        <td>${data.weightLoss.wakeup[2]}</td>
+                        <td>${data.weightLoss.wakeup[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.weightLoss.BreakFast[0]}</td>
+                        <td>${data.weightLoss.BreakFast[1]}</td>
+                        <td>${data.weightLoss.BreakFast[2]}</td>
+                        <td>${data.weightLoss.BreakFast[3]}</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>${data.weightLoss.Snack1[0]}</td>
+                        <td>${data.weightLoss.Snack1[1]}</td>
+                        <td>${data.weightLoss.Snack1[2]}</td>
+                        <td>${data.weightLoss.Snack1[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.weightLoss.Launch[0]}</td>
+                        <td>${data.weightLoss.Launch[1]}</td>
+                        <td>${data.weightLoss.Launch[2]}</td>
+                        <td>${data.weightLoss.Launch[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.weightLoss.Snack[0]}</td>
+                        <td>${data.weightLoss.Snack[1]}</td>
+                        <td>${data.weightLoss.Snack[2]}</td>
+                        <td>${data.weightLoss.Snack[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.weightLoss.Dinner[0]}</td>
+                        <td>${data.weightLoss.Dinner[1]}</td>
+                        <td>${data.weightLoss.Dinner[2]}</td>
+                        <td>${data.weightLoss.Dinner[3]}</td>
+                    </tr>
+
+                    <tr>
+                        <td>${data.weightLoss.Sleep[0]}</td>
+                        <td>${data.weightLoss.Sleep[1]}</td>
+                        <td>${data.weightLoss.Sleep[2]}</td>
+                        <td>${data.weightLoss.Sleep[3]}</td>
+                    </tr>
+
+                </tbody>
+            </table > `
+            }
+        }
     </script>
     <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>

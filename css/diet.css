@@ -7,8 +7,9 @@
      background-color: #171819;
      color: #fff;
  }
- .protein-container{
-    margin-top: 70px;
+
+ .protein-container {
+     margin-top: 70px;
  }
 
  .protein-container h1 {
@@ -67,7 +68,7 @@
  .protein-card .card2 p {
      font-size: 20px;
      font-weight: 600;
-     padding: 10px 20px; 
+     padding: 10px 20px;
  }
 
  .protein-foods {
@@ -111,7 +112,7 @@
  }
 
  .focus-card .card h2 {
-    font-size: 20px;
+     font-size: 20px;
      background: #FF4545;
      width: 200px;
      border-radius: 5px;
@@ -147,9 +148,11 @@
      text-align: center;
      padding: 20px;
  }
-.one-carb p{
-    text-align: center;
-}
+
+ .one-carb p {
+     text-align: center;
+ }
+
  .carbs h4 {
      font-weight: 800;
      padding: 10px;
@@ -180,62 +183,97 @@
  .pre-workout ul li {
      padding: 7px;
  }
-.fa-arrow-right{
-    color: #FF4545;
-    padding-right: 10px;
-}
+
+ .fa-arrow-right {
+     color: #FF4545;
+     padding-right: 10px;
+ }
 
  @media screen and (max-width: 1042px) {
      .carbs-container {
          flex-direction: column;
      }
+
      .focus-card .card h2 {
-       width: 150px;
-       font-size: 15px;
-    }
+         width: 150px;
+         font-size: 15px;
+     }
  }
 
- @media screen and (max-width: 496px){
-    .focus-card .card h2 {
-        left: 20%;
-        top: -20px;
-    }
-    .pre-workout ul{
-        font-size: 15px;
-    }
+ @media screen and (max-width: 496px) {
+     .focus-card .card h2 {
+         left: 20%;
+         top: -20px;
+     }
+
+     .pre-workout ul {
+         font-size: 15px;
+     }
  }
 
-.one-day-container h2{
-    text-align: center;
-}
-.gain-loss-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-}
-.gain-loss-container .btn{
-    font-weight: 700;
-    margin: 0 10px;
-}
+ .one-day-container h2 {
+     text-align: center;
+ }
 
-.table-container p{
-    font-size: 25px;
-    text-align: center;
-    font-weight: 400;
-    padding: 20px;
-}
-table{
-    width: 90%;
-    margin: 10px auto;
-    text-align: center;
-    background: #424242;
-}
-th{
-    color: #FF4545;
-    font-size: 30px;
-}
-th,td{
-    padding: 20px;
-    border-radius: 10px;
-}
+ .gain-loss-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 10px;
+ }
+
+ .gain-loss-container .btn {
+     font-weight: 700;
+     margin: 0 10px;
+ }
+
+ .table-container p {
+     font-size: 25px;
+     text-align: center;
+     font-weight: 400;
+     padding: 20px;
+ }
+
+ table {
+     width: 90%;
+     margin: 10px auto;
+     text-align: center;
+     background: #424242;
+ }
+
+ th {
+     color: #FF4545;
+     font-size: 30px;
+ }
+
+ th,
+ td {
+     padding: 20px;
+     border-radius: 10px;
+ }
+
+ @media screen and (max-width: 670px) {
+
+     .table-container p {
+         font-size: 25px;
+         text-align: center;
+         font-weight: 400;
+         padding: 20px;
+     }
+
+     table {
+         width: 90%;
+         margin: 10px auto;
+         text-align: center;
+         background: #424242;
+     }
+
+     th {
+         font-size: 20px;
+     }
+
+     th,
+     td {
+         padding: 2px;
+     }
+ }
