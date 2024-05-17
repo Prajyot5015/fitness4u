@@ -113,7 +113,7 @@ body {
     }
 
     #check:checked~.navbar {
-        height: 280px;
+        height: 350px;
     }
 
     .navbar a {
@@ -312,7 +312,7 @@ a {
     width: 45%;
     height: auto;
     box-sizing: border-box;
-    background: #fff;
+    background: #424242;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
     cursor: pointer;
@@ -338,29 +338,23 @@ a {
 
 .trainer .people .team1 .name h4 {
     font-size: 20px;
-    color: #212529;
 }
 
 .trainer .people .team1 .name i,
 .trainer .people .team1 .pro i {
     font-size: 20px;
     cursor: pointer;
-    color: #212529;
+    color: #fff;
 }
 
 .trainer .people .team1 .pro {
     padding: 5px 20px 5px 20px;
 }
 
-.trainer .people .team1 .pro p {
-    color: #212529;
-}
-
 .description {
     text-align: center;
     font-weight: bolder;
     padding: 10px;
-    color: #171819;
 }
 
 .heading-process {

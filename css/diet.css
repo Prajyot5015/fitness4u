@@ -96,7 +96,7 @@
  }
 
  .focus-card {
-     width: 80%;
+     width: 90%;
      display: block;
      margin: 50px auto;
  }
@@ -174,12 +174,16 @@
  .pre-workout ul {
      font-size: 20px;
      font-weight: bold;
+     list-style: none;
  }
 
  .pre-workout ul li {
      padding: 7px;
  }
-
+.fa-arrow-right{
+    color: #FF4545;
+    padding-right: 10px;
+}
 
  @media screen and (max-width: 1042px) {
      .carbs-container {
@@ -187,7 +191,7 @@
      }
      .focus-card .card h2 {
        width: 150px;
-       font-size: 20px;
+       font-size: 15px;
     }
  }
 
@@ -195,5 +199,8 @@
     .focus-card .card h2 {
         left: 20%;
         top: -20px;
+    }
+    .pre-workout ul{
+        font-size: 15px;
     }
  }
