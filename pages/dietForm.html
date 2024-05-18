@@ -169,6 +169,10 @@
             const product = document.getElementById('product').value;
             const description = document.getElementById('description').value;
 
+            if (meal === "Select" || time === "Select Time" || !product || !description) {
+                alert("Please fill in all fields.");
+            }
+
             data.push({ meal, time, product, description });
 
             document.getElementById('meal').value = "Select";
