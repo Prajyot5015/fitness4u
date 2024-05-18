@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/style.css" />
+    <title>Fitness4U</title>
+    <style>
+        .form-items {
+            max-width: 650px;
+            padding: 28px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #424242;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+            display: block;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .form-items h2 {
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 8px;
+            border-bottom: 1px solid silver;
+        }
+
+        .form-items .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .form-items .content .input-box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            padding-bottom: 15px;
+        }
+
+        .form-items .content .input-box label {
+            width: 95%;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .form-items .content .input-box select,
+        input {
+            height: 40px;
+            width: 95%;
+            padding: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        #amount {
+            background: #fff;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .btn-container .btn {
+            margin: 0 20px;
+            font-size: 20px;
+            padding: 10px 30px;
+        }
+
+        .mode {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 95%;
+        }
+
+        .mode input {
+            height: 25px;
+        }
+
+        .payment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .payment img {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        /* Media Query */
+        @media screen and (max-width: 678px) {
+            .form-container {
+                max-width: 80%;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .form-items .content .input-box {
+                margin-bottom: 12px;
+                width: 100%;
+            }
+
+            .btn-container .btn {
+                padding: 5px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header Section-->
+
+    <header class="header">
+        <a href="./../index.html"> <i class="fa-solid fa-dumbbell"></i>Fitness<span>4</span>U </a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="menu-bar">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <i class="fa-solid fa-xmark" id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="./../index.html">Home</a>
+            <a href="./../pages/about.html">About Us</a>
+            <a href="./../pages/supplement.html">Supplements</a>
+            <a href="./../pages/diet.html" class="active">Diet Plan</a>
+            <a href="./../pages/contact.html">Contact</a>
+        </nav>
+        <i class="fa-regular fa-moon moon"></i>
+    </header>
+
+    <!--End Header Section-->
+
+    <div class="form-container">
+        <div class="form-items">
+            <form>
+                <h2>Become a Member Today</h2>
+                <div class="content">
+                    <div class="input-box">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter Your Name" required />
+                    </div>
+                    <div class="input-box">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="Enter Your Age" required />
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter your Email" id="email" required />
+                    </div>
+                    <div class="input-box">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" placeholder="Enter Your Mobile Number" id="mobile" required />
+                    </div>
+                    <div class="input-box">
+                        <label for="months">Months</label>
+                        <select name="months" id="months" onclick="showTotal()">
+                            <option>Select Months</option>
+                            <option>1 Month</option>
+                            <option>2 Months</option>
+                            <option>1 Year</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="amount">Total Amount</label>
+                        <input type="text" placeholder="Total" id="amount" disabled required />
+                    </div>
+                    <div class="input-box">
+                        <label for="mode">Payment Mode</label>
+                        <div class="mode">
+                            <input type="radio" name="mode" id="online" onclick="onlineMode('online')" required />
+                            <label for="online"> online</label>
+                            <input type="radio" name="mode" id="offline" onclick="onlineMode('offline')" required />
+                            <label for="offline">offline</label>
+                        </div>
+                    </div>
+                    <div class="input-box payment" id="paymodes">
+
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="button" class="btn" onclick="validate()">Proceed</button>
+                    <button type="reset" class="btn">Cancle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Start Footer -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <div class="contact">
+                    <i class="far fa-envelope"></i>
+                    <p><a href="mailto:fitness4u@gmail.com">fitness4u@gmail.com</a></p>
+                </div>
+                <div class="contact">
+                    <i class="fas fa-phone-volume"></i><a href="tel:09960014512">
+                        <p> 09960014512
+                    </a></p>
+                </div>
+                <div class="contact">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><a href="https://maps.app.goo.gl/ZCaLBy9iwxGCiZHYA" target="blank">
+                            Nagar Manmad Road, MH SH 10, near Bus Stand,Babhaleshwar,Maharashtra 413737 </a>
+                </div>
+                </p>
+            </div>
+
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="./../index.html">Home</a></li>
+                    <li><a href="./../pages/about.html">About Us</a></li>
+                    <li><a href="./../pages/supplement.html">Supplements</a></li>
+                    <li><a href="./../pages/diet.html">Diet Plan</a></li>
+                    <li><a href="./../pages/dietForm.html">Your Diet</a></li>
+                    <li><a href="./../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <div class="social-media">
+                    <ul>
+                        <li><a href="https://www.facebook.com/mayur.darndale" target="_blank"><i
+                                    class="fa-brands fa-facebook-f"></i></a> </li>
+                        <li><a href="https://www.instagram.com/md_mayur93?igsh=MWl6dDFpeDlldWxnMw==" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made With Love <i class="fas fa-heart"></i> By Fitness<span class="four">4</span>U</p>
+        </div>
+    </footer>
+
+    <!--End Footer-->
+
+    <script>
+        function showTotal() {
+            const amountElement = document.getElementById('amount');
+            const monthsElement = document.getElementById('months').value;
+            console.log(amountElement);
+            console.log(monthsElement);
+
+            amountElement.value = "";
+
+            if (monthsElement == 'Select Months') {
+                amountElement.value = "0";
+            }
+            else if (monthsElement == '1 Month') {
+                amountElement.value = "500";
+            }
+            else if (monthsElement == '2 Months') {
+                amountElement.value = "800";
+            }
+            else if (monthsElement == '1 Year') {
+                amountElement.value = "4500";
+            }
+
+        }
+
+        function onlineMode(mode) {
+            const paymodesElement = document.getElementById('paymodes');
+            console.log(paymodesElement);
+
+            if (mode == 'online') {
+                paymodesElement.innerHTML = `<img src="./../png/payment/p.png" alt="payment" />
+                                             <img src="./../png/payment/g-pay.png" alt="payment" />
+                                            <img src="./../png/payment/a.png" alt="payment" />
+                                            <img src="./../png/payment/paytm.png" alt="payment" /> `;
+            }
+            else if (mode == 'offline') {
+                paymodesElement.innerHTML = "";
+            }
+        }
+
+        function validate() {
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const months = document.getElementById('months').value;
+
+            if (!name || !age || !email || !mobile || months === "Select Months") {
+                alert("Please fill all fields");
+            }
+
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
