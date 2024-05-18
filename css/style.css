@@ -317,7 +317,7 @@ a {
 
 
 .protein-container {
-    margin-top: 70px;
+    margin: 70px 0;
 }
 
 .protein-card {
@@ -349,7 +349,9 @@ a {
 }
 .protein-card .card img{
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 70px;
 }
 .heading-process {
     text-align: center;
