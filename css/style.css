@@ -346,6 +346,10 @@ a {
 .protein-card .card a{
     text-decoration: none;
     color: #fff;
+  
+}
+.protein-card .card a:hover{
+    color: #f13a11;
 }
 .protein-card .card img{
     display: block;
