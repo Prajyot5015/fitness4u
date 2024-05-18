@@ -6,143 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness4U</title>
     <link rel="stylesheet" href="./../css/style.css" />
-    <style>
-        .form-items {
-            max-width: 650px;
-            padding: 28px;
-            border-radius: 10px;
-            overflow: hidden;
-            background: #424242;
-            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
-            display: block;
-            margin: 100px auto;
-        }
-
-        .form-items h2 {
-            font-size: 26px;
-            font-weight: bold;
-            text-align: center;
-            padding-bottom: 8px;
-            border-bottom: 1px solid silver;
-        }
-
-        .form-items .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 20px 0;
-        }
-
-        .form-items .content .input-box {
-            display: flex;
-            flex-wrap: wrap;
-            width: 50%;
-            padding-bottom: 15px;
-        }
-
-        .form-items .content .input-box label {
-            width: 95%;
-            font-weight: bold;
-            margin: 5px 0;
-        }
-
-        .form-items .content .input-box select,
-        input {
-            height: 40px;
-            width: 95%;
-            padding: 0 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            outline: none;
-        }
-
-        .alert p {
-            text-align: center;
-            font-style: italic;
-        }
-
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px;
-        }
-
-        .btn-container .btn {
-            margin: 0 20px;
-            font-size: 20px;
-            padding: 10px 30px;
-        }
-
-        @media screen and (max-width: 600px) {
-            .form-container {
-                max-width: 280px;
-            }
-
-            .form-items .content {
-                max-height: 380px;
-                overflow: auto;
-            }
-
-            .form-items .content .input-box {
-                margin-bottom: 12px;
-                width: 100%;
-            }
-
-        }
-
-        .table-container p {
-            font-size: 25px;
-            text-align: center;
-            font-weight: 400;
-            padding: 20px;
-        }
-
-        .table-container table {
-            width: 90%;
-            margin: 10px auto;
-            text-align: center;
-            background: #424242;
-        }
-
-        .table-container th {
-            color: #FF4545;
-            font-size: 30px;
-        }
-
-        .table-container th,
-        .table-container td {
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        @media screen and (max-width: 670px) {
-
-            .table-container p {
-                font-size: 25px;
-                text-align: center;
-                font-weight: 400;
-                padding: 20px;
-            }
-
-            .table-container table {
-                width: 90%;
-                margin: 10px auto;
-                text-align: center;
-                background: #424242;
-            }
-
-            .table-container th {
-                font-size: 20px;
-            }
-
-            .table-container th,
-            .table-container td {
-                padding: 2px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./../css/dietForm.css" />
 </head>
 
 <body>
@@ -231,17 +95,53 @@
             </thead>
 
             <tbody id="table-content">
-                <tr>
-                    <td>Wake Up</td>
-                    <td>6 AM - 7 AM</td>
-                    <td>Warm Water or Green Tea</td>
-                    <td>Early in morning when you wake up <br /> drink warm water or green tea</td>
-                </tr>
+
             </tbody>
         </table>
     </div>
 
-   
+    <script>
+        let data = [];
+
+        const listOfLocalStorage = localStorage.getItem("data");
+        if (listOfLocalStorage) {
+            data = JSON.parse(listOfLocalStorage);
+            displayData();
+        }
+
+        function add() {
+            const meal = document.getElementById('meal').value;
+            const time = document.getElementById('time').value;
+            const product = document.getElementById('product').value;
+            const description = document.getElementById('description').value;
+
+            data.push({ meal, time, product, description });
+
+            document.getElementById('meal').value = "Select";
+            document.getElementById('time').value = "Select Time";
+            document.getElementById('product').value = "";
+            document.getElementById('description').value = "";
+
+            localStorage.setItem("data", JSON.stringify(data));
+
+            displayData()
+        }
+
+        function displayData() {
+            const tableContent = document.getElementById('table-content');
+            tableContent.innerHTML = '';
+
+            data.forEach((item, index) => {
+                tableContent.innerHTML += ` <tr>
+                    <td>${item.meal}</td>
+                    <td>${item.time}</td>
+                    <td>${item.product}</td>
+                    <td>${item.description}</td>
+                </tr>`;
+
+            });
+        }
+    </script>
 </body>
 
 </html>

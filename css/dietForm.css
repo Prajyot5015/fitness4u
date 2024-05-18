@@ -1,0 +1,134 @@
+.form-items {
+    max-width: 650px;
+    padding: 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #424242;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.form-items h2 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+
+.form-items .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.form-items .content .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.form-items .content .input-box label {
+    width: 95%;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.form-items .content .input-box select,
+input {
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.alert p {
+    text-align: center;
+    font-style: italic;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.btn-container .btn {
+    margin: 0 20px;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.table-container p {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    padding: 20px;
+}
+
+.table-container table {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    background: #424242;
+}
+
+.table-container th {
+    color: #FF4545;
+    font-size: 30px;
+}
+
+.table-container th,
+.table-container td {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Media Query */
+@media screen and (max-width: 678px) {
+    .form-container {
+        max-width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .form-items .content .input-box {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .btn-container .btn {
+        padding: 5px 20px;
+    }
+
+    .table-container p {
+        font-size: 25px;
+        text-align: center;
+        font-weight: 400;
+        padding: 20px;
+    }
+
+    .table-container table {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+        background: #424242;
+    }
+
+    .table-container th {
+        font-size: 20px;
+    }
+
+    .table-container th,
+    .table-container td {
+        padding: 2px;
+    }
+}
