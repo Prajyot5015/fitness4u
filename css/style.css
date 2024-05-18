@@ -12,7 +12,6 @@ body {
     color: #fff;
 }
 
-
 /* Start Header Section */
 
 .header {
@@ -230,7 +229,7 @@ body {
 }
 
 .trainer {
-    padding: 120px;
+    padding: 20px 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -316,6 +315,42 @@ a {
     padding: 10px;
 }
 
+
+.protein-container {
+    margin-top: 70px;
+}
+
+.protein-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.protein-card .card {
+    width: 400px;
+    height: 210px;
+    border: none;
+    background: #424242;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin: 10px;
+}
+
+.protein-card .card h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+.protein-card .card a{
+    text-decoration: none;
+    color: #fff;
+}
+.protein-card .card img{
+    display: block;
+    margin: 10px auto;
+}
 .heading-process {
     text-align: center;
     padding: 20px;
