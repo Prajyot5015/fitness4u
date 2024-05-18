@@ -1,0 +1,32 @@
+textarea {
+    padding: 10px;
+    height: 80px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.option-content {
+    display: flex;
+    align-items: center;
+}
+
+.option-content input {
+    width: 20px;
+
+}
+
+.option-content label {
+    padding-left: 5px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.delivery {
+    text-align: center;
+}
