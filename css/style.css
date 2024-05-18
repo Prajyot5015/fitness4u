@@ -60,8 +60,6 @@ body {
 
 .navbar a:hover {
     transition: all 0.3s ease;
-    border: 1px solid #212529;
-    border-radius: 5px;
 }
 
 .moon {
