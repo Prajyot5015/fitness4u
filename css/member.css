@@ -39,7 +39,7 @@
 }
 
 .form-items .content .input-box select,
-input {
+input ,textarea {
     height: 40px;
     width: 95%;
     padding: 0 10px;
