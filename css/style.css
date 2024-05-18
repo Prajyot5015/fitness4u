@@ -313,7 +313,7 @@ a {
     box-sizing: border-box;
     background: #424242;
     border-radius: 10px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
     cursor: pointer;
 
 }
@@ -372,6 +372,7 @@ a {
     height: 180px;
     background: #424242;
     border-radius: 5px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
     text-align: center;
     margin: 10px;
 }

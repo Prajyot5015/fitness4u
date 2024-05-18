@@ -9,7 +9,7 @@
     height: 500px;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
     display: block;
     margin: 30px auto;
 }
@@ -26,7 +26,7 @@
     object-fit: cover;
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
 }
 
 .btn-container .active {
