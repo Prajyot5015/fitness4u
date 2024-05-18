@@ -82,46 +82,6 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1325px) {
-    .menu-bar {
-        display: inline-flex;
-    }
-
-    #check:checked~.menu-bar #menu-icon {
-        display: none;
-    }
-
-    .menu-bar #close-icon {
-        display: none;
-    }
-
-    #check:checked~.menu-bar #close-icon {
-        display: block;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: #7f8c8d;
-        overflow: hidden;
-        transition: 0.3s ease;
-    }
-
-    #check:checked~.navbar {
-        height: 350px;
-    }
-
-    .navbar a {
-        display: block;
-        font-size: 25px;
-        margin: 20px 80px;
-        text-align: center;
-    }
-}
-
 /*End Header Section */
 
 .btn {
@@ -505,23 +465,49 @@ footer {
     font-size: 20px;
 }
 
-@media (max-width: 540px) {
-    .footer-container {
-        display: grid;
-        margin: auto;
-    }
-
-    .footer-content h3 {
-        font-size: 30px;
-        margin-top: 30px;
-    }
-}
-
 /* End Footer */
 
 /* Media Query */
 
-@media screen and (max-width: 1042px) {}
+@media screen and (max-width: 1325px) {
+    .menu-bar {
+        display: inline-flex;
+    }
+
+    #check:checked~.menu-bar #menu-icon {
+        display: none;
+    }
+
+    .menu-bar #close-icon {
+        display: none;
+    }
+
+    #check:checked~.menu-bar #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #7f8c8d;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 350px;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 25px;
+        margin: 20px 80px;
+        text-align: center;
+    }
+}
 
 @media screen and (max-width: 991px) {
     .mid p {
@@ -690,6 +676,19 @@ footer {
         width: 70%;
     }
 
+}
+
+
+@media (max-width: 540px) {
+    .footer-container {
+        display: grid;
+        margin: auto;
+    }
+
+    .footer-content h3 {
+        font-size: 30px;
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 496px) {

@@ -189,27 +189,6 @@
      padding-right: 10px;
  }
 
- @media screen and (max-width: 1042px) {
-     .carbs-container {
-         flex-direction: column;
-     }
-
-     .focus-card .card h2 {
-         width: 150px;
-         font-size: 15px;
-     }
- }
-
- @media screen and (max-width: 496px) {
-     .focus-card .card h2 {
-         left: 20%;
-         top: -20px;
-     }
-
-     .pre-workout ul {
-         font-size: 15px;
-     }
- }
 
  .one-day-container h2 {
      text-align: center;
@@ -250,32 +229,6 @@
  .table-container td {
      padding: 20px;
      border-radius: 10px;
- }
-
- @media screen and (max-width: 670px) {
-
-     .table-container p {
-         font-size: 25px;
-         text-align: center;
-         font-weight: 400;
-         padding: 20px;
-     }
-
-     .table-container table {
-         width: 90%;
-         margin: 10px auto;
-         text-align: center;
-         background: #424242;
-     }
-
-     .table-container th {
-         font-size: 20px;
-     }
-
-     .table-container th,
-     .table-container td {
-         padding: 2px;
-     }
  }
 
  .meal-plan-container {
@@ -349,4 +302,54 @@
 
  .calories-card .card ul li {
      padding: 10px;
+ }
+
+ /* Media Query */
+
+ @media screen and (max-width: 1042px) {
+     .carbs-container {
+         flex-direction: column;
+     }
+
+     .focus-card .card h2 {
+         width: 150px;
+         font-size: 15px;
+     }
+ }
+
+ @media screen and (max-width: 670px) {
+
+     .table-container p {
+         font-size: 25px;
+         text-align: center;
+         font-weight: 400;
+         padding: 20px;
+     }
+
+     .table-container table {
+         width: 90%;
+         margin: 10px auto;
+         text-align: center;
+         background: #424242;
+     }
+
+     .table-container th {
+         font-size: 20px;
+     }
+
+     .table-container th,
+     .table-container td {
+         padding: 2px;
+     }
+ }
+
+ @media screen and (max-width: 496px) {
+     .focus-card .card h2 {
+         left: 30%;
+         top: -20px;
+     }
+
+     .pre-workout ul {
+         font-size: 15px;
+     }
  }
