@@ -82,75 +82,78 @@
 
   <!--Supplement Detail-->
 
-  <h1 class="supplement-heading">Supplement Details</h1>
-  <div class=" product-container" id="product-container">
-    <div class=" product-card">
-      <div class="product-imgs">
-        <div class="img-display">
-          <div class="img-showcase">
-            <img src="./../img/supplement/whey/w1.png" alt="supplement image" id="product-main-image" />
+  <div id="toggle">
+    <h1 class="supplement-heading">Supplement Details</h1>
+    <div class=" product-container" id="product-container">
+      <div class=" product-card">
+        <div class="product-imgs">
+          <div class="img-display">
+            <div class="img-showcase">
+              <img src="./../img/supplement/whey/w1.png" alt="supplement image" id="product-main-image" />
+            </div>
+          </div>
+          <div class="img-select" id="small-imgs">
+            <div class="img-item">
+              <img src="./../img/supplement/whey/w1.png" alt="supplement image" onclick="change('1','product1')" />
+            </div>
+            <div class="img-item">
+              <img src="./../img/supplement/whey/w2.png" alt="supplement image" onclick="change('2','product1')" />
+            </div>
+            <div class="img-item">
+              <img src="./../img/supplement/whey/w3.jpg" alt="supplement image" onclick="change('3','product1')" />
+            </div>
+            <div class="img-item">
+              <img src="./../img/supplement/whey/w4.jpg" alt="supplement image" onclick="change('4','product1')" />
+            </div>
           </div>
         </div>
-        <div class="img-select" id="small-imgs">
-          <div class="img-item">
-            <img src="./../img/supplement/whey/w1.png" alt="supplement image" onclick="change('1','product1')" />
+
+        <div class="product-content">
+          <h2 class="product-title" id="product-title"> Whey Protein Powder</h2>
+          <a href="https://maps.app.goo.gl/ZCaLBy9iwxGCiZHYA" target="blank" class="product-link">visit our store</a>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>4.7</span>
           </div>
-          <div class="img-item">
-            <img src="./../img/supplement/whey/w2.png" alt="supplement image" onclick="change('2','product1')" />
+
+          <div class="product-detail">
+            <h2>about this item: </h2>
+            <p id="desc">[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for
+              building muscle.
+              <br />
+              [GREATER STRENGTH]: 3g of fast-absorbing creatine monohydrate for superior muscle gains and strength.
+              <br />
+              [FASTER RECOVERY]: Rich in BCAAs and Glutamic acid which ensures faster muscle recovery and growth after
+              an
+              intense workout. <br />
+              [BUILD IMMUNITY]: The antibodies that help fight diseases are actually made of protein and with a high
+              concentration of amino acids. <br />
+            </p>
+            <ul>
+              <li>Brand: <span id="brand">Nutrabay</span></li>
+              <li>Flavour: <span id="flavour">Chocolate</span></li>
+              <li>Age Range: <span>Adult</span></li>
+              <li>Product Benefits : <span>Muscle Growth</span></li>
+            </ul>
           </div>
-          <div class="img-item">
-            <img src="./../img/supplement/whey/w3.jpg" alt="supplement image" onclick="change('3','product1')" />
+
+          <div class="product-price">
+            <p class="last-price">M.R.P.: <span id="mrp">₹ 3,699</span></p>
+            <p class="new-price">Price: <span>₹ <span id="price">2200 </span> </span></p>
+            <p class="new-price">Total: <span id="total-quantity"> 2200  </span></p>
+            <p class="new-price">Quantity: <span id="quantity-place">1</span> </span></p>
           </div>
-          <div class="img-item">
-            <img src="./../img/supplement/whey/w4.jpg" alt="supplement image" onclick="change('4','product1')" />
+
+          <div class="purchase-info">
+            <img src="./../png/minus.png" class="quantity-img" onclick="decrement()" />
+            <span class="quantity-text" id="quantity-text">1</span>
+            <img src="./../png/plus.png" class="quantity-img" onclick="increment()" />
+            <button type="button" class="btn" onclick="setValue()">Buy Now</button>
           </div>
-        </div>
-      </div>
-
-      <div class="product-content">
-        <h2 class="product-title" id="product-title"> Whey Protein Powder</h2>
-        <a href="https://maps.app.goo.gl/ZCaLBy9iwxGCiZHYA" target="blank" class="product-link">visit our store</a>
-        <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-          <span>4.7</span>
-        </div>
-
-
-
-        <div class="product-detail">
-          <h2>about this item: </h2>
-          <p id="desc">[BUILD MUSCLE]: 30g of protein per 45g scoop provide a rich protein source to the body for
-            building muscle.
-            <br />
-            [GREATER STRENGTH]: 3g of fast-absorbing creatine monohydrate for superior muscle gains and strength. <br />
-            [FASTER RECOVERY]: Rich in BCAAs and Glutamic acid which ensures faster muscle recovery and growth after an
-            intense workout. <br />
-            [BUILD IMMUNITY]: The antibodies that help fight diseases are actually made of protein and with a high
-            concentration of amino acids. <br />
-          </p>
-          <ul>
-            <li>Brand: <span id="brand">Nutrabay</span></li>
-            <li>Flavour: <span id="flavour">Chocolate</span></li>
-            <li>Age Range: <span>Adult</span></li>
-            <li>Product Benefits : <span>Muscle Growth</span></li>
-          </ul>
-        </div>
-
-        <div class="product-price">
-          <p class="last-price">M.R.P.: <span id="mrp">₹ 3,699</span></p>
-          <p class="new-price">Price: <span>₹ <span id="price">2200 </span> </span></p>
-          <p class="new-price">Total: <span id="total-quantity"> 2200 (1) </span></p>
-        </div>
-
-        <div class="purchase-info">
-          <img src="./../png/minus.png" class="quantity-img" onclick="decrement()" />
-          <span class="quantity-text" id="quantity-text">1</span>
-          <img src="./../png/plus.png" class="quantity-img" onclick="increment()" />
-          <button type="button" class="btn">Buy Now</button>
         </div>
       </div>
     </div>
@@ -189,7 +192,7 @@
           <li><a href="./../pages/supplement.html">Supplements</a></li>
           <li><a href="./../pages/diet.html">Diet Plan</a></li>
           <li><a href="./../pages/dietForm.html">Your Diet</a></li>
-          
+
         </ul>
       </div>
       <div class="footer-content">
@@ -270,6 +273,7 @@
       const quantityTotal = document.getElementById('total-quantity');
       const quantityText = document.getElementById('quantity-text');
       const mrp = document.getElementById('mrp');
+      const quantity_place = document.getElementById('quantity-place');
 
       if (product == "product1") {
         bigImg.src = `${data.product1.img[0]}`;
@@ -287,7 +291,8 @@
         brand.innerText = `${data.product1.brand} `;
         flavour.innerText = `${data.product1.flavour} `;
         quantityText.innerText = "1";
-        quantityTotal.innerText = `${data.product1.price} (1)`;
+        quantityTotal.innerText = `${data.product1.price}`;
+        quantity_place.innerText = "1";
       }
 
       else if (product == "product2") {
@@ -306,7 +311,8 @@
         brand.innerText = `${data.product2.brand} `;
         flavour.innerText = `${data.product2.flavour} `;
         quantityText.innerText = "1";
-        quantityTotal.innerText = `${data.product2.price} (1)`;
+        quantityTotal.innerText = `${data.product2.price}`;
+        quantity_place.innerText = "1";
       }
 
       else if (product == "product3") {
@@ -325,7 +331,8 @@
         brand.innerText = `${data.product3.brand} `;
         flavour.innerText = `${data.product3.flavour} `;
         quantityText.innerText = "1";
-        quantityTotal.innerText = `${data.product3.price} (1)`;
+        quantityTotal.innerText = `${data.product3.price}`;
+        quantity_place.innerText = "1";
       }
 
       else if (product == "product4") {
@@ -344,7 +351,8 @@
         brand.innerText = `${data.product4.brand} `;
         flavour.innerText = `${data.product4.flavour} `;
         quantityText.innerText = "1";
-        quantityTotal.innerText = `${data.product4.price} (1)`;
+        quantityTotal.innerText = `${data.product4.price}`;
+        quantity_place.innerText = "1";
       }
     }
 
@@ -415,7 +423,9 @@
     function increment() {
       const quantityText = document.getElementById('quantity-text');
       const quantityTotal = document.getElementById('total-quantity');
+      const quantity_place = document.getElementById('quantity-place');
       const totalPrice = document.getElementById('price');
+
       let quantity = parseInt(quantityText.innerText);
 
       if (quantity < 5) {
@@ -424,13 +434,16 @@
       else {
         alert("You can't buy more than 5 products");
       }
-      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} (${quantity})`;
+      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} `;
+      quantity_place.innerText = `${quantity}`;
     }
 
     function decrement() {
       const quantityText = document.getElementById('quantity-text');
       const quantityTotal = document.getElementById('total-quantity');
       const totalPrice = document.getElementById('price');
+      const quantity_place = document.getElementById('quantity-place');
+
       let quantity = parseInt(quantityText.innerText);
 
       if (quantity > 1) {
@@ -439,9 +452,15 @@
       else {
         alert("Buy minimum 1 product");
       }
-      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} (${quantity})`;
+      quantityTotal.innerText = ` ${quantity * parseInt(totalPrice.innerText)} `;
+      quantity_place.innerText = `${quantity}`;
     }
 
+    function setValue(){
+      const totalquantityElement = document.getElementById('total-quantity');
+
+      localStorage.setItem("totalPrice", totalquantityElement.innerText);
+    }
   </script>
   <script src="https://kit.fontawesome.com/fabfdf08cb.js" crossorigin="anonymous"></script>
 </body>
