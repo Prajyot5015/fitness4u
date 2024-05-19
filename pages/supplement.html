@@ -13,24 +13,27 @@
   <link rel="stylesheet" href="./../css/supplement.css" />
 </head>
 
-<body>
+<body id="body">
+  
   <!--Header Section-->
 
-  <header class="header">
+  <header class="header" id="header">
     <a href="./../index.html"> <i class="fa-solid fa-dumbbell"></i>Fitness<span>4</span>U </a>
     <input type="checkbox" id="check" />
-    <label for="check" class="menu-bar">
+    <label for="check" class="menu-bar" id="menu-bar">
       <i class="fa-solid fa-bars" id="menu-icon"></i>
       <i class="fa-solid fa-xmark" id="close-icon"></i>
     </label>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <a href="./../index.html">Home</a>
       <a href="./../pages/about.html">About Us</a>
       <a href="./../pages/supplement.html" class="active">Supplements</a>
       <a href="./../pages/diet.html">Diet Plan</a>
       <a href="./../pages/member.html"><button type="button" class="btn">Join Now</button></a>
     </nav>
-    <i class="fa-regular fa-moon moon"></i>
+    <div id="darkLight">
+      <img src="./../png/dark-mode.png" alt="dark/light image" class="darkLight" onclick="dark()" />
+    </div>
   </header>
 
   <!--End Header Section-->
@@ -40,7 +43,7 @@
   <div class="products">
     <h1>Supplements</h1>
     <div class="all-products">
-      <div class="product">
+      <div class="product" id="product1">
         <img src="./../img/supplement/whey/w1.png" alt="supplement image" />
         <div class="product-info">
           <h4 class="pro-title">Whey Protein Powder</h4>
@@ -49,7 +52,7 @@
         </div>
       </div>
 
-      <div class="product">
+      <div class="product" id="product2">
         <img src="./../img/supplement/mass-gainer/m1.png" alt="supplement image" />
         <div class="product-info">
           <h4 class="pro-title"> Mass Gainer</h4>
@@ -58,7 +61,7 @@
         </div>
       </div>
 
-      <div class="product">
+      <div class="product" id="product3">
         <img src="./../img/supplement/bcaa/b1.png" alt="supplement image" />
         <div class="product-info">
           <h4 class="pro-title"> Bolt Nutrition BCAA</h4>
@@ -67,7 +70,7 @@
         </div>
       </div>
 
-      <div class="product">
+      <div class="product" id="product4">
         <img src="./../img/supplement/cutting/c1.png" alt="supplement image" />
         <div class="product-info">
           <h4 class="pro-title"> Nutrition Power</h4>
@@ -144,7 +147,7 @@
           <div class="product-price">
             <p class="last-price">M.R.P.: <span id="mrp">₹ 3,699</span></p>
             <p class="new-price">Price: <span>₹ <span id="price">2200 </span> </span></p>
-            <p class="new-price">Total: <span id="total-quantity"> 2200  </span></p>
+            <p class="new-price">Total: <span id="total-quantity"> 2200 </span></p>
             <p class="new-price">Quantity: <span id="quantity-place">1</span> </span></p>
           </div>
 
@@ -216,6 +219,62 @@
   <!--End Footer-->
 
   <script>
+    function dark() {
+      const bodyElement = document.getElementById('body');
+      bodyElement.className = "theme-dark";
+
+      const headerElement = document.getElementById('header');
+      headerElement.classList.remove("header");
+      headerElement.classList.add("header-dark");
+
+      const navbarElement = document.getElementById('navbar');
+      navbarElement.classList.remove("navbar");
+      navbarElement.classList.add("navbar-dark");
+
+      const menuBarElement = document.getElementById('menu-bar');
+      menuBarElement.classList.remove("menu-bar");
+      menuBarElement.classList.add("menu-bar-dark");
+
+      const product1Element = document.getElementById('product1');
+      product1Element.classList.remove("product");
+      product1Element.classList.add("product-dark");
+
+      const product2Element = document.getElementById('product2');
+      product2Element.classList.remove("product");
+      product2Element.classList.add("product-dark");
+
+      const product3Element = document.getElementById('product3');
+      product3Element.classList.remove("product");
+      product3Element.classList.add("product-dark");
+
+      const product4Element = document.getElementById('product4');
+      product4Element.classList.remove("product");
+      product4Element.classList.add("product-dark");
+
+      const darkLightElement = document.getElementById('darkLight');
+      darkLightElement.innerHTML = "";
+      darkLightElement.innerHTML = ` <img src="./../png/themes.png" alt="dark/light image" class="darkLight" onclick="light()" />`;
+    }
+    function light() {
+      const bodyElement = document.getElementById('body');
+      bodyElement.classList.remove("theme-dark");
+
+      const headerElement = document.getElementById('header');
+      headerElement.classList.remove("header-dark");
+      headerElement.classList.add("header");
+
+      const navbarElement = document.getElementById('navbar');
+      navbarElement.classList.add("navbar");
+      navbarElement.classList.remove("navbar-dark");
+
+      const menuBarElement = document.getElementById('menu-bar');
+      menuBarElement.classList.add("menu-bar");
+      menuBarElement.classList.remove("menu-bar-dark");
+
+      const darkLightElement = document.getElementById('darkLight');
+      darkLightElement.innerHTML = "";
+      darkLightElement.innerHTML = ` <img src="./../png/dark-mode.png" alt="dark/light image" class="darkLight" onclick="dark()" /> `;
+    }
     const data = {
       "product1": {
         "name": " Whey Protein Powder",
@@ -456,7 +515,7 @@
       quantity_place.innerText = `${quantity}`;
     }
 
-    function setValue(){
+    function setValue() {
       const totalquantityElement = document.getElementById('total-quantity');
 
       localStorage.setItem("totalPrice", totalquantityElement.innerText);
