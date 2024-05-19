@@ -17,13 +17,13 @@
      padding: 20px;
  }
 
- .protein-card {
+ .protein-card-content {
      display: flex;
      justify-content: center;
      flex-wrap: wrap;
  }
 
- .protein-card .card {
+ .protein-card-content .card {
      width: 400px;
      height: 210px;
      border: none;
@@ -34,14 +34,14 @@
      margin: 10px;
  }
 
- .protein-card .card h2 {
+ .protein-card-content .card h2 {
      font-size: 20px;
      font-weight: bolder;
      padding-top: 20px;
      text-transform: uppercase;
  }
 
- .protein-card .card .inner {
+ .protein-card-content .card .inner {
      display: flex;
      justify-content: center;
      align-items: center;
@@ -49,7 +49,7 @@
      padding-top: 30px;
  }
 
- .protein-card .card .inner .fa-plus {
+ .protein-card-content .card .inner .fa-plus {
      color: #FF4545;
  }
 
@@ -65,17 +65,17 @@
      border-radius: 50px;
  }
 
- .protein-card .card2 p {
+ .protein-card-content .card2 p {
      font-size: 20px;
      font-weight: 600;
      padding: 10px 20px;
  }
 
  .protein-foods {
-     margin-top: 10px;
      display: flex;
      align-items: center;
      justify-content: space-around;
+     margin-top: 12px;
  }
 
  .protein-foods img {
@@ -87,6 +87,7 @@
  .food {
      display: flex;
      align-items: center;
+     justify-content: center;
      font-size: 16px;
      font-weight: bolder;
  }
