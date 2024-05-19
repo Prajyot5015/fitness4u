@@ -52,6 +52,12 @@ body {
     transition: all 0.3s ease;
 }
 
+.darkLight {
+    width: 70px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
 .active {
     border: 1px solid #212529;
     border-radius: 5px;
@@ -777,3 +783,244 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+/* light theme */
+
+
+.theme-dark {
+    background-color: #ffffff;
+    color: #171819;
+}
+
+.header-dark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.header-dark a {
+    font-size: 25px;
+    color: #171819;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 0 20px;
+}
+
+.header-dark span {
+    color: red;
+}
+
+.navbar-dark a {
+    font-size: 25px;
+    color: #171819;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 3px 20px;
+    transition: all 0.3s ease;
+}
+
+.active {
+    border: 1px solid #212529;
+    border-radius: 5px;
+}
+
+.navbar-dark a:hover {
+    transition: all 0.3s ease;
+}
+
+.menu-bar-dark {
+    font-size: 25px;
+    color: #171819;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 1325px) {
+    .menu-bar-dark {
+        display: inline-flex;
+    }
+
+    #check:checked~.menu-bar-dark #menu-icon {
+        display: none;
+    }
+
+    .menu-bar-dark #close-icon {
+        display: none;
+    }
+
+    #check:checked~.menu-bar-dark #close-icon {
+        display: block;
+    }
+
+    .navbar-dark {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #ffffff;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    #check:checked~.navbar-dark {
+        height: 350px;
+    }
+
+    .navbar-dark a {
+        display: block;
+        font-size: 25px;
+        margin: 20px 80px;
+        text-align: center;
+    }
+}
+
+/*End Header Section */
+
+.trainer .people .team1-dark {
+    width: 45%;
+    height: auto;
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #171819;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.trainer .people .team1-dark .img img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.trainer .people .team1-dark .name,
+.trainer .people .team1-dark .pro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trainer .people .team1-dark .name {
+    padding: 5px 20px 0 20px;
+}
+
+.trainer .people .team1-dark .name h4 {
+    font-size: 20px;
+}
+
+.trainer .people .team1-dark .name i,
+.trainer .people .team1-dark .pro i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #171819;
+}
+
+.trainer .people .team1-dark .pro {
+    padding: 5px 20px 5px 20px;
+}
+
+@media screen and (max-width: 991px) {
+    .trainer .people .team1-dark {
+        width: 48%;
+    }
+
+    .trainer .people .team1-dark .name {
+        padding: 5px 15px 15px;
+    }
+
+    .trainer .people .team1-dark .name h4 {
+        font-size: 18px;
+    }
+
+    .trainer .people .team1-dark .name i,
+    .trainer .people .team1-dark .pro i {
+        font-size: 18px;
+    }
+
+    .trainer .people .team1-dark .pro {
+        padding: 0 15px 5px 15px;
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .trainer .people .team1-dark {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+.protein-card .card-dark {
+    width: 400px;
+    height: 210px;
+    border: none;
+    background: #ffffff;
+    color: #171819;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 10px;
+}
+
+.protein-card .card-dark h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+.protein-card .card-dark a {
+    text-decoration: none;
+    color: #171717;
+
+}
+
+.protein-card .card-dark a:hover {
+    color: #f13a11;
+}
+
+.protein-card .card-dark img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 70px;
+}
+
+
+.processes .card-dark {
+    width: 200px;
+    height: 180px;
+    background: #fff;
+    color: #171717;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 10px;
+}
+
+.processes .card-dark i {
+    margin: 30px;
+    padding: 15px;
+    background-color: #f13a11;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.processes .card-dark h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
