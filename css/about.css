@@ -79,3 +79,8 @@
     padding: 1px;
     margin: 10px;
 }
+@media screen and (max-width: 496px) {
+    .trainer{
+        margin-top: 10px;
+    }
+}
