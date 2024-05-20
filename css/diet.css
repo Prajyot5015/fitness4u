@@ -218,7 +218,7 @@
      width: 90%;
      margin: 10px auto;
      text-align: center;
-     background: #424242;
+     border-radius: 10px;
  }
 
  .table-container th {
@@ -234,10 +234,14 @@
 
  .meal-plan-container {
      width: 90%;
-     background: #424242;
      display: block;
      margin: 20px auto;
      border-radius: 20px;
+     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+ }
+
+ .meal-plan-container-light {
+     background: #424242;
  }
 
  .meal-plan-container h2 {
@@ -271,10 +275,17 @@
      margin: 20px;
  }
 
+ .calories-card-dark {
+     background: #424242;
+ }
+
+ .calories-card-light {
+     background: #fff;
+ }
+
  .calories-card .card {
      width: 250px;
      border: none;
-     background: #424242;
      border-radius: 10px;
      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
      margin: 10px;
@@ -320,20 +331,6 @@
 
  @media screen and (max-width: 670px) {
 
-     .table-container p {
-         font-size: 25px;
-         text-align: center;
-         font-weight: 400;
-         padding: 20px;
-     }
-
-     .table-container table {
-         width: 90%;
-         margin: 10px auto;
-         text-align: center;
-         background: #424242;
-     }
-
      .table-container th {
          font-size: 20px;
      }
@@ -353,4 +350,79 @@
      .pre-workout ul {
          font-size: 15px;
      }
+ }
+
+
+ /* Light theme */
+
+ .protein-card-content .card-dark {
+     width: 400px;
+     height: 210px;
+     border: none;
+     background: #ffffff;
+     border-radius: 10px;
+     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+     text-align: center;
+     margin: 10px;
+ }
+
+ .protein-card-content .card-dark h2 {
+     font-size: 20px;
+     font-weight: bolder;
+     padding-top: 20px;
+     text-transform: uppercase;
+ }
+
+ .protein-card-content .card-dark .inner {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 30px;
+     padding-top: 30px;
+ }
+
+ .protein-card-content .card-dark .inner .fa-plus {
+     color: #FF4545;
+ }
+
+
+ .focus-card .card-dark {
+     border: none;
+     background: #ffffff;
+     border-radius: 10px;
+     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+     margin: 10px;
+     position: relative;
+ }
+
+ .focus-card .card-dark h2 {
+     font-size: 20px;
+     background: #FF4545;
+     width: 200px;
+     border-radius: 5px;
+     position: absolute;
+     left: 40%;
+     top: -20px;
+     margin: 0 auto;
+     text-align: center;
+     padding: 5px;
+ }
+
+
+ @media screen and (max-width: 496px) {
+     .focus-card .card-dark h2 {
+         left: 30%;
+         top: -20px;
+     }
+ }
+
+ @media screen and (max-width: 1042px) {
+     .focus-card .card-dark h2 {
+         width: 150px;
+         font-size: 15px;
+     }
+ }
+
+ .meal-plan-container-dark {
+     background: #ffffff;
  }

@@ -9,25 +9,26 @@
     <link rel="stylesheet" href="./../css/style.css" />
 </head>
 
-<body>
-
+<body id="body">
     <!--Header Section-->
 
-    <header class="header">
+    <header class="header" id="header">
         <a href="./../index.html"> <i class="fa-solid fa-dumbbell"></i>Fitness<span>4</span>U </a>
         <input type="checkbox" id="check" />
-        <label for="check" class="menu-bar">
+        <label for="check" class="menu-bar" id="menu-bar">
             <i class="fa-solid fa-bars" id="menu-icon"></i>
             <i class="fa-solid fa-xmark" id="close-icon"></i>
         </label>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <a href="./../index.html">Home</a>
             <a href="./../pages/about.html">About Us</a>
             <a href="./../pages/supplement.html">Supplements</a>
             <a href="./../pages/diet.html" class="active">Diet Plan</a>
             <a href="./../pages/member.html"><button type="button" class="btn">Join Now</button></a>
         </nav>
-        <i class="fa-regular fa-moon moon"></i>
+        <div id="darkLight">
+            <img src="./../png/dark-mode.png" alt="dark/light image" class="darkLight" onclick="dark()" />
+        </div>
     </header>
 
     <!--End Header Section-->
@@ -35,7 +36,7 @@
     <div class="protein-container">
         <h1>How Much Protein Do You Need TO Build Muscle?</h1>
         <div class="protein-card-content">
-            <div class="card">
+            <div class="card" id="card1">
                 <h2>How Do You Grow Muscle?</h2>
                 <div class="inner">
                     <p>Enough Protein</p>
@@ -43,13 +44,13 @@
                     <p>Resistance exercise</p>
                 </div>
             </div>
-            <div class="card card2">
+            <div class="card card2" id="card2">
                 <h2>What is enough protein?</h2>
                 <span class="formula">0.8 - 2.0 g/kg</span>
                 <p>Weight(lbs) / 2.2 = Weight(kg)</p>
                 <p>Weight(kg) x 0.8 = Protein</p>
             </div>
-            <div class="card">
+            <div class="card" id="card3">
                 <h2>protein sources</h2>
                 <div class="protein-foods">
                     <div class="food">
@@ -89,7 +90,7 @@
     <div class="focus">
         <h1>What to eat before & after workouts to build muscle</h1>
         <div class="focus-card">
-            <div class="card">
+            <div class="card" id="fcard1">
                 <h2>Focus on:</h2>
                 <div class="carbs-container">
                     <div class="carbs one-carb">
@@ -111,7 +112,7 @@
         </div>
 
         <div class="focus-card">
-            <div class="card">
+            <div class="card" id="fcard2">
                 <h2>Before Workout:</h2>
                 <div class="carbs-container">
                     <div class="carbs pre-workout">
@@ -131,7 +132,7 @@
         </div>
 
         <div class="focus-card">
-            <div class="card">
+            <div class="card" id="fcard3">
                 <h2>After workout:</h2>
                 <div class="carbs-container">
                     <div class="carbs pre-workout">
@@ -226,7 +227,7 @@
         </div>
     </div>
 
-    <div class="meal-plan-container">
+    <div class="meal-plan-container meal-plan-container-light" id="mealPlan">
         <h2>2400-Calorie Meal Plan For Building Muscle</h2>
         <p>This Plan includes three balanced meals and two snacks daily,providing the perfect mix of 200 grams of
             protein,243 grams of carbohydrates, and 70g of dietary fats.</p>
@@ -263,8 +264,8 @@
             </tbody>
         </table>
         <div class="calories-card">
-            <div class="card">
-                <h4 >BreakFast</h4>
+            <div class="card calories-card-dark" id="ccard1">
+                <h4>BreakFast</h4>
                 <p>Chia Seed Mango Pudding</p>
                 <ul>
                     <li>Chia Seeds</li>
@@ -275,8 +276,8 @@
                     <li>Honey</li>
                 </ul>
             </div>
-            <div class="card">
-                <h4 >Lunch</h4>
+            <div class="card calories-card-dark" id="ccard2">
+                <h4>Lunch</h4>
                 <p>Protein Pasta Salad</p>
                 <ul>
                     <li>Cucumbers</li>
@@ -287,8 +288,8 @@
                     <li>Shrimp</li>
                 </ul>
             </div>
-            <div class="card">
-                <h4 >Dinner</h4>
+            <div class="card calories-card-dark" id="ccard3">
+                <h4>Dinner</h4>
                 <p>Lemon Pepper Tilapia</p>
                 <ul>
                     <li>Tuna salad</li>
@@ -298,8 +299,8 @@
                     <li>Wheat crackers</li>
                 </ul>
             </div>
-            <div class="card">
-                <h4 >Snack</h4>
+            <div class="card calories-card-dark" id="ccard4">
+                <h4>Snack</h4>
                 <p>Almonds and a Hard Boiled Egg</p>
                 <ul>
                     <li>Almonds</li>
@@ -340,7 +341,7 @@
                     <li><a href="./../pages/supplement.html">Supplements</a></li>
                     <li><a href="./../pages/diet.html">Diet Plan</a></li>
                     <li><a href="./../pages/dietForm.html">Your Diet</a></li>
-                   
+
                 </ul>
             </div>
             <div class="footer-content">
@@ -364,6 +365,135 @@
     <!--End Footer-->
 
     <script>
+        function dark() {
+            const bodyElement = document.getElementById('body');
+            bodyElement.className = "theme-dark";
+
+            const headerElement = document.getElementById('header');
+            headerElement.classList.remove("header");
+            headerElement.classList.add("header-dark");
+
+            const navbarElement = document.getElementById('navbar');
+            navbarElement.classList.remove("navbar");
+            navbarElement.classList.add("navbar-dark");
+
+            const menuBarElement = document.getElementById('menu-bar');
+            menuBarElement.classList.remove("menu-bar");
+            menuBarElement.classList.add("menu-bar-dark");
+
+            const card1Element = document.getElementById('card1');
+            card1Element.classList.remove("card");
+            card1Element.classList.add("card-dark");
+
+            const card2Element = document.getElementById('card2');
+            card2Element.classList.remove("card");
+            card2Element.classList.add("card-dark");
+
+            const card3Element = document.getElementById('card3');
+            card3Element.classList.remove("card");
+            card3Element.classList.add("card-dark");
+
+            const fcard1Element = document.getElementById('fcard1');
+            fcard1Element.classList.remove("card");
+            fcard1Element.classList.add("card-dark");
+
+            const fcard2Element = document.getElementById('fcard2');
+            fcard2Element.classList.remove("card");
+            fcard2Element.classList.add("card-dark");
+
+            const fcard3Element = document.getElementById('fcard3');
+            fcard3Element.classList.remove("card");
+            fcard3Element.classList.add("card-dark");
+
+            const mealPlanElement = document.getElementById('mealPlan');
+            mealPlanElement.classList.remove("meal-plan-container-light");
+            mealPlanElement.classList.add("meal-plan-container-dark");
+
+            const ccard1Element = document.getElementById('ccard1');
+            ccard1Element.classList.remove("calories-card-dark");
+            ccard1Element.classList.add("calories-card-light");
+
+            const ccard2Element = document.getElementById('ccard2');
+            ccard2Element.classList.remove("calories-card-dark");
+            ccard2Element.classList.add("calories-card-light");
+
+            const ccard3Element = document.getElementById('ccard3');
+            ccard3Element.classList.remove("calories-card-dark");
+            ccard3Element.classList.add("calories-card-light");
+
+            const ccard4Element = document.getElementById('ccard4');
+            ccard4Element.classList.remove("calories-card-dark");
+            ccard4Element.classList.add("calories-card-light");
+
+
+            const darkLightElement = document.getElementById('darkLight');
+            darkLightElement.innerHTML = "";
+            darkLightElement.innerHTML = ` <img src="./../png/themes.png" alt="dark/light image" class="darkLight" onclick="light()" />`;
+        }
+        function light() {
+            const bodyElement = document.getElementById('body');
+            bodyElement.classList.remove("theme-dark");
+
+            const headerElement = document.getElementById('header');
+            headerElement.classList.remove("header-dark");
+            headerElement.classList.add("header");
+
+            const navbarElement = document.getElementById('navbar');
+            navbarElement.classList.add("navbar");
+            navbarElement.classList.remove("navbar-dark");
+
+            const menuBarElement = document.getElementById('menu-bar');
+            menuBarElement.classList.add("menu-bar");
+            menuBarElement.classList.remove("menu-bar-dark");
+
+            const card1Element = document.getElementById('card1');
+            card1Element.classList.add("card");
+            card1Element.classList.remove("card-dark");
+
+            const card2Element = document.getElementById('card2');
+            card2Element.classList.add("card");
+            card2Element.classList.remove("card-dark");
+
+            const card3Element = document.getElementById('card3');
+            card3Element.classList.add("card");
+            card3Element.classList.remove("card-dark");
+
+            const fcard1Element = document.getElementById('fcard1');
+            fcard1Element.classList.add("card");
+            fcard1Element.classList.remove("card-dark");
+
+            const fcard2Element = document.getElementById('fcard2');
+            fcard2Element.classList.add("card");
+            fcard2Element.classList.remove("card-dark");
+
+            const fcard3Element = document.getElementById('fcard3');
+            fcard3Element.classList.add("card");
+            fcard3Element.classList.remove("card-dark");
+
+            const mealPlanElement = document.getElementById('mealPlan');
+            mealPlanElement.classList.add("meal-plan-container-light");
+            mealPlanElement.classList.remove("meal-plan-container-dark");
+
+            const ccard1Element = document.getElementById('ccard1');
+            ccard1Element.classList.add("calories-card-dark");
+            ccard1Element.classList.remove("calories-card-light");
+
+            const ccard2Element = document.getElementById('ccard2');
+            ccard2Element.classList.add("calories-card-dark");
+            ccard2Element.classList.remove("calories-card-light");
+
+            const ccard3Element = document.getElementById('ccard3');
+            ccard3Element.classList.add("calories-card-dark");
+            ccard3Element.classList.remove("calories-card-light");
+
+            const ccard4Element = document.getElementById('ccard4');
+            ccard4Element.classList.add("calories-card-dark");
+            ccard4Element.classList.remove("calories-card-light");
+
+            const darkLightElement = document.getElementById('darkLight');
+            darkLightElement.innerHTML = "";
+            darkLightElement.innerHTML = ` <img src="./../png/dark-mode.png" alt="dark/light image" class="darkLight" onclick="dark()" /> `;
+        }
         const data = {
             "muscleGain": {
                 "wakeup": ["Wake Up", "6 AM - 7 AM", "Warm Water", "Early in morning when you wake up <br /> drink warm water (Empty Stamach)"],
