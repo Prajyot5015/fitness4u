@@ -1,9 +1,14 @@
+.form-dark-bg{
+    background: #424242;
+}
+.form-light-bg{
+    background: #fff;
+}
 .form-items {
     max-width: 650px;
     padding: 28px;
     border-radius: 10px;
     overflow: hidden;
-    background: #424242;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
     display: block;
     margin: 0 auto;
